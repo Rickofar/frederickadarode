@@ -1,7 +1,7 @@
-- 👋 Hi, I’m @Rickofar
-- 👀 I’m interested in web development
-- 🌱 I’m currently learning HMTL, CSS and Javascript
-- 💞️ I’m looking to collaborate on web development
+- 👋 Hi, I’m @Rickofar (Frederick Adarode)
+- 👀 A Creative  development
+- 🌱 I’m Passionate Ionic Angular developer dedicated to crafting visually appealing, user-centric mobile and web applications
+- 💞️ I’m looking to collaborate on web or mobile app development
 - 📫 How to reach me https://wa.me/2348179290343
 
 <!---
