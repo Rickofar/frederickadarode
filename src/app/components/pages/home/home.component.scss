@@ -1,0 +1,320 @@
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8rem 0;
+
+  .intro {
+    width: 50%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+
+    span {
+      font-size: 30px;
+    }
+
+    h1 {
+      font-size: 60px;
+      color: #5074cf;
+    }
+
+    .job {
+      margin: 1rem 0;
+
+      p {
+        font-size: 1.2rem;
+        width: 55%;
+        text-align: center;
+        margin: auto;
+
+        #green {
+          font-size: 1.2rem;
+          color: #1cbe59;
+        }
+
+        #purple {
+          font-size: 1.2rem;
+          color: #8067f0;
+        }
+      }
+    }
+
+    .description {
+      color: #6f6b80;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin: 1rem auto;
+      width: 80%;
+
+      p {
+        margin-bottom: 0px;
+      }
+    }
+
+    .brief {
+      margin: 5rem auto;
+
+      .info-button {
+        display: flex;
+        align-items: center;
+
+        .abt-btn {
+          position: relative;
+          overflow: hidden;
+          display: inline-block;
+          width: auto;
+          /* margin-top: 30px; */
+
+          a {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            transition: 0.3s;
+            position: relative;
+            z-index: 1;
+            justify-content: center;
+            border-radius: 3rem;
+            color: #5074cf;
+            border: 3px solid #5074cf;
+            padding: 0.8rem 1rem;
+            width: 140px;
+            transition: all 0.3s linear;
+
+            &:before {
+              content: "";
+              position: absolute;
+              border-radius: 3rem;
+              top: 106%;
+              border: none;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: #5074cf;
+              transition: top 0.3s;
+              z-index: -1;
+            }
+
+            span {
+              font-size: 1rem;
+              position: relative;
+              z-index: 2;
+            }
+          }
+
+          &:hover {
+            cursor: pointer;
+
+            a:before {
+              top: 0;
+            }
+
+            span {
+              color: #fff;
+            }
+          }
+          // a:hover {
+          //   border: 3px solid #5074cf;
+          //   color: black;
+          //   background-color: transparent;
+          //   cursor: pointer;
+          // }
+        }
+
+        .social {
+          padding-left: 24px;
+          position: relative;
+          padding-top: 15px;
+
+          ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            gap: 1rem;
+            align-content: center;
+          }
+
+          img {
+            height: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  .profile {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+
+    .avatar {
+      height: 400px;
+      // border-radius: 50%;
+      // box-shadow: 0 0 20px #5074cf;
+      // margin: -4rem auto 0;
+    }
+
+    .skills {
+      display: inline-block;
+      position: absolute;
+      width: 75px;
+      height: 75px;
+
+      .illustrator img {
+        display: flex;
+        position: relative;
+        height: 50px;
+        top: -40px;
+        right: 200px;
+        border-radius: 10px;
+        box-shadow: 0 0 5px #a57e2a;
+        animation: bounce 3s ease-in-out infinite;
+      }
+
+      .photoshop img {
+        display: flex;
+        position: relative;
+        height: 50px;
+        top: -80px;
+        box-shadow: 0 0 5px #5074cf;
+        right: -200px;
+        animation: bounce 3s ease-in-out infinite;
+      }
+
+      .figma img {
+        display: flex;
+        position: relative;
+        border-radius: 8px;
+        height: 48px;
+        padding: 10px;
+        top: 255px;
+        box-shadow: 0 0 5px #ac02accb;
+        right: -145px;
+        animation: bounce 3s ease-in-out infinite;
+      }
+
+      .effects img {
+        display: flex;
+        position: relative;
+        border-radius: 8px;
+        height: 48px;
+        bottom: -30px;
+        left: -200px;
+        box-shadow: 0 0 5px #5074cf;
+        animation: bounce 3s ease-in-out infinite;
+      }
+
+      .html img {
+        display: flex;
+        position: relative;
+        border-radius: 8px;
+        height: 48px;
+        top: -260px;
+        left: 30px;
+        box-shadow: 0 0 5px #ff4500;
+        animation: bounce 3s ease-in-out infinite;
+      }
+
+      .css img {
+        display: flex;
+        position: relative;
+        border-radius: 8px;
+        height: 48px;
+        top: -260px;
+        left: -120px;
+        // box-shadow: 0 0 5px #5074cf;
+        animation: bounce 3s ease-in-out infinite;
+      }
+
+      .javascript img {
+        display: flex;
+        position: relative;
+        border-radius: 8px;
+        height: 48px;
+        bottom: 160px;
+        right: -220px;
+        box-shadow: 0 0 5px #ffff00;
+        animation: bounce 3s ease-in-out infinite;
+      }
+
+      .angular img {
+        display: flex;
+        position: relative;
+        border-radius: 8px;
+        height: 48px;
+        top: -150px;
+        left: -200px;
+        box-shadow: 0 0 5px #f00;
+        animation: bounce 3s ease-in-out infinite;
+      }
+
+      .ionic img {
+        display: flex;
+        position: relative;
+        border-radius: 8px;
+        height: 48px;
+        bottom: 390px;
+        right: -175px;
+        box-shadow: 0 0 5px #5074cf;
+        animation: bounce 3s ease-in-out infinite;
+      }
+
+      .nodeJS img {
+        display: flex;
+        position: relative;
+        background-color: #ffffff;
+        border-radius: 8px;
+        height: 48px;
+        padding: 10px;
+        top: -75px;
+        left: -70px;
+        box-shadow: 0 0 5px #008000;
+        animation: bounce 3s ease-in-out infinite;
+      }
+
+      @keyframes bounce {
+        0% {
+          transform: translateY(90px);
+        }
+
+        50% {
+          transform: translateY(79px);
+        }
+
+        100% {
+          transform: translateY(90px);
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1040px) {
+    flex-direction: column-reverse;
+
+    .intro {
+      margin: 1.5rem auto;
+      width: 100%;
+
+      span {
+        font-size: 1.5rem;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+
+    .profile {
+      width: 100%;
+
+      .avatar {
+        height: 240px;
+        min-height: 180px;
+      }
+
+      .skills {
+        display: none;
+      }
+    }
+  }
+}

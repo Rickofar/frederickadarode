@@ -1,0 +1,48 @@
+.go-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: -2rem;
+  background-color: #5074cf;
+  color: #fff;
+  font-weight: 900;
+  font-size: 2rem;
+  border: none;
+  border-radius: 50%;
+  padding: 0px 5px 5px;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+  height: 30px;
+  width: 30px;
+  animation: disappear 0.3s ease-in-out;
+
+  .go-to-top i {
+    color: #fff;
+  }
+}
+
+@keyframes disappear {
+  0% {
+    right: 2rem;
+  }
+
+  100% {
+    right: -2rem;
+    visibility: hidden;
+  }
+}
+
+.go-to-top.show {
+  visibility: visible;
+  right: 2rem;
+  animation: appear 0.3s ease-in-out;
+}
+
+@keyframes appear {
+  0% {
+    right: -2rem;
+  }
+
+  100% {
+    right: 2rem;
+  }
+}
