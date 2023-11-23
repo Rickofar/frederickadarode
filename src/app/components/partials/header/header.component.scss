@@ -79,11 +79,11 @@
   }
 
   .active:hover {
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid var(--off-white-color);
   }
 
   a:hover {
-    color: #333 !important;
+    color: var(--off-white-color) !important;
   }
 }
 

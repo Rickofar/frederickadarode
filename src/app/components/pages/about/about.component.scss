@@ -1,4 +1,11 @@
 /* about section */
+#intro {
+  width: 70%;
+  margin: 2rem auto;
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--off-white-color);
+}
 
 .icon {
   margin-bottom: 40px;
@@ -93,18 +100,17 @@
     list-style: none;
     text-align: center;
 
-    .about-list {
-      .title {
-        margin-bottom: 20px;
+    .title {
+      margin-bottom: 20px;
 
-        h3 {
-          font-size: 23px;
-        }
+      h3 {
+        font-size: 23px;
+        color: #5074cf;
       }
     }
 
     .text {
-      color: #6f6b80;
+      color: var(--off-white-color);
       padding: 0 18px;
       margin: 0.8rem auto;
 
@@ -214,7 +220,9 @@
     }
 
     h3 {
+      margin: 1rem auto;
       font-size: 40px;
+      color: var(--text-color);
     }
   }
 

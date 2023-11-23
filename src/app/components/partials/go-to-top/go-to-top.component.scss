@@ -2,22 +2,19 @@
   position: fixed;
   bottom: 2rem;
   right: -2rem;
-  background-color: #5074cf;
-  color: #fff;
+  color: var(--button-text-color);
+  background: var(--button-background);
+  box-shadow: 0 0 5px var(--button-background);
   font-weight: 900;
-  font-size: 2rem;
+  font-size: 1.5rem;
   border: none;
   border-radius: 50%;
-  padding: 0px 5px 5px;
+  // padding: 0px 5px 5px;
   cursor: pointer;
   transition: opacity 0.3s ease-in-out;
   height: 30px;
   width: 30px;
   animation: disappear 0.3s ease-in-out;
-
-  .go-to-top i {
-    color: #fff;
-  }
 }
 
 @keyframes disappear {

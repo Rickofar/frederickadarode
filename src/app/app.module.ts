@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/partials/header/header.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { GoToTopComponent } from './components/partials/go-to-top/go-to-top.component';
 import { AboutComponent } from './components/pages/about/about.component';
+import { DarkModeToggleComponent } from './components/partials/theme/toggle-theme';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { AboutComponent } from './components/pages/about/about.component';
     HomeComponent,
     GoToTopComponent,
     AboutComponent,
+    DarkModeToggleComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],

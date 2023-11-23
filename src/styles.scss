@@ -7,6 +7,8 @@
 
 html {
   font-family: "Trebuchet MS";
+  background: var(--background-color);
+  // color: #cacaca;
 }
 
 a {
@@ -30,15 +32,15 @@ li {
 
 .bouncing-mouse {
   display: flex;
-  position: absolute;
+  position: fixed;
   justify-content: center;
   left: 50%;
   padding: 0;
   transform: translateX(-50%);
-  bottom: 0px;
+  bottom: 1rem;
 
   .mouse {
-    border: 2px solid;
+    border: 2px solid var(--button-background);
     height: 35px;
     width: 22px;
     border-radius: 15px;
@@ -46,7 +48,7 @@ li {
 
   .mouse-btn {
     position: absolute;
-    border: 1.35px solid;
+    border: 1.35px solid var(--button-background);
     border-radius: 10px;
     width: 0px;
     height: 8px;
