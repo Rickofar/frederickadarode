@@ -5,6 +5,11 @@
   text-align: center;
   font-size: 1.2rem;
   color: var(--off-white-color);
+
+  @media screen and (max-width: 768px) {
+    width: 98%;
+    margin: 2rem auto 0;
+  }
 }
 
 .icon {
@@ -99,6 +104,7 @@
     display: flex;
     list-style: none;
     text-align: center;
+    margin: auto;
 
     .title {
       margin-bottom: 20px;
@@ -189,7 +195,6 @@
       box-shadow: 4px 1px 6px rgba(178, 161, 255, 0.8);
       border-radius: 8px;
       left: 320px;
-      position: absolute;
       margin-top: -167px;
 
       h3 {
@@ -228,7 +233,7 @@
 
   .role-details {
     margin-bottom: 47px;
-    color: #6f6b80;
+    color: var(--off-white-color);
   }
 }
 
@@ -268,68 +273,53 @@
   .about-details {
     display: grid;
     margin: 0;
+    width: 100%;
     margin-top: 112px;
   }
 
   .about-details-image {
     display: grid;
     position: relative;
-    width: 100%;
     padding: 0;
-  }
 
-  .about-details-image img {
-    display: flex;
-    position: relative;
-    margin: auto;
-    height: 300px;
+    img {
+      display: flex;
+      margin: auto;
+      height: 300px;
+    }
   }
 
   .wrapper {
-    display: grid;
-    position: relative;
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    margin-top: 20px;
-    margin-bottom: 50px;
-  }
+    margin: 1rem auto;
 
-  .number-years {
-    position: relative;
-    display: grid;
-    align-items: center;
-    margin-top: 0px;
-  }
+    .number-years {
+      width: 100%;
 
-  .years {
-    display: grid;
-    position: relative;
-    justify-content: center;
-    padding: 15px 0px 18px 0px;
-    background-color: #fff;
-    width: 100%;
-    left: 0px;
-  }
+      .years {
+        justify-content: center;
+        width: 100%;
 
-  .years span {
-    padding-left: 0;
-  }
+        span {
+          padding-left: 0;
+        }
+      }
+    }
 
-  .projects {
-    margin-bottom: 20px;
-  }
+    .projects {
+      margin-bottom: 20px;
 
-  .total-projects {
-    display: grid;
-    position: relative;
-    justify-content: center;
-    padding: 20px 0px 12px 0px;
-    background-color: #fff;
-    margin-top: 20px;
-    left: 0px;
-  }
+      .total-projects {
+        justify-content: center;
+        width: 100%;
 
-  .total-projects span {
-    padding-left: 0;
+        span {
+          padding-left: 0;
+        }
+      }
+    }
   }
 
   .about-details-info {
