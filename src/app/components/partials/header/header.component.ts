@@ -43,7 +43,6 @@ export class HeaderComponent implements OnInit {
     { name: 'Portfolio', url: '/portfolio' },
     { name: 'Service', url: '/service' },
     { name: 'Contact', url: '/contact' },
-    { name: 'Download CV', url: '/CV' },
   ];
   activeTab!: string;
 

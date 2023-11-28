@@ -32,7 +32,7 @@ export class AppComponent implements OnInit {
     );
 
     document.documentElement.style.setProperty(
-      '--tab-button-hover-color',
+      '--hover-color',
       isDarkMode ? '#768dff' : '#768dff'
     );
 

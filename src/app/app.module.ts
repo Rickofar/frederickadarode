@@ -8,6 +8,7 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { GoToTopComponent } from './components/partials/go-to-top/go-to-top.component';
 import { AboutComponent } from './components/pages/about/about.component';
 import { DarkModeToggleComponent } from './components/partials/theme/toggle-theme';
+import { PortfolioComponent } from './components/pages/portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { DarkModeToggleComponent } from './components/partials/theme/toggle-them
     GoToTopComponent,
     AboutComponent,
     DarkModeToggleComponent,
+    PortfolioComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],

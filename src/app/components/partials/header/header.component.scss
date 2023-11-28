@@ -285,4 +285,18 @@
       box-shadow: 0 0 5px #5074cf;
     }
   }
+
+  .mbDownload {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+
+    span {
+      // border: 1px solid #f0f8ff;
+      padding: 0.7rem 1.5rem;
+      border-radius: 0.7rem;
+      color: #dcdcdc;
+      background: #5074cf;
+    }
+  }
 }
