@@ -16,58 +16,82 @@
         </div>
         <div class="portfolio-links">
           <ul>
-            <!-- <li><a href="#" class="active links">All</a></li> -->
-            <li><a href="#" class="links">YouTube</a></li>
-            <li><a href="#" class="links">Email Marketing</a></li>
-            <li><a href="#" class="links">Websites</a></li>
-            <li><a href="#" class="links">Web Apps</a></li>
-            <li><a href="#" class="links">Details</a></li>
+            <li *ngFor="let link of links">
+              <a href="portfolio/{{ link.id }}" class="links">{{
+                link.name
+              }}</a>
+            </li>
           </ul>
         </div>
       </div>
 
       <div class="portfolio-gallery">
         <ul>
-          <li class="mockup">
-            <div class="portfolio1"></div>
+          <li class="mockup" id="video">
+            <a href="https://youtu.be/3cS8A3JIU_s" target="_blank">
+              <div class="portfolio1"></div
+            ></a>
             <div class="mockup-inner">
-              <h3>Mockup Shape</h3>
-              <span>YouTube</span>
+              <a href="https://youtu.be/3cS8A3JIU_s" target="_blank">
+                <h3>Video</h3>
+                <span>Days & Night (Deep Ends)</span></a
+              >
             </div>
           </li>
-          <li class="ave-bottle">
-            <div class="portfolio2"></div>
+          <li class="ave-bottle" id="website">
+            <a href="https://www.bonny-official.com" target="_blank"
+              ><div class="portfolio2"></div
+            ></a>
             <div class="ave-bottle-inner">
-              <h3>Ave Bottle</h3>
-              <span>Vimeo</span>
+              <a href="https://www.bonny-official.com" target="_blank"
+                ><h3>Bonny Official</h3>
+                <span>Website</span>
+              </a>
             </div>
           </li>
-          <li class="magic-art">
-            <div class="portfolio3"></div>
+          <li class="magic-art" id="website">
+            <a href="https://www.rickofar.GitHub.io/lmv-pro" target="_blank">
+              <div class="portfolio3"></div
+            ></a>
             <div class="magic-art-inner">
-              <h3>Magic Art</h3>
-              <span>Soundcloud</span>
+              <a href="https://www.rickofar.GitHub.io/lmv-pro" target="_blank">
+                <h3>LMV Pro-Lights</h3>
+                <span>Website</span></a
+              >
             </div>
           </li>
-          <li class="art-stone">
-            <div class="portfolio4 img-responsive"></div>
+          <li class="art-stone" id="app">
+            <a href="https://analogclockbyrickofar.netlify.app" target="_blank">
+              <div class="portfolio4 img-responsive"></div
+            ></a>
             <div class="art-stone-inner">
-              <h3>Art Stone</h3>
-              <span>Popup</span>
+              <a
+                href="https://analogclockbyrickofar.netlify.app"
+                target="_blank"
+              >
+                <h3>Analog Clock</h3>
+                <span>Web App</span></a
+              >
             </div>
           </li>
-          <li class="blue-lemon">
-            <div class="portfolio5"></div>
+          <li class="blue-lemon" id="video">
+            <a href="https://youtu.be/tMDM_NKoAic" target="_blank">
+              <div class="portfolio5"></div
+            ></a>
             <div class="blue-lemon-inner">
-              <h3>Blue Lemon</h3>
-              <span>Popup</span>
+              <a href="https://youtu.be/tMDM_NKoAic" target="_blank">
+                <h3>Cactus</h3>
+                <span>Video</span></a
+              >
             </div>
           </li>
-          <li class="global-evolution">
-            <div class="portfolio6"></div>
+          <li class="global-evolution" id="app">
+            <a href="https://calculatorbyrickofar.netlify.app" target="_blank">
+              <div class="portfolio6"></div
+            ></a>
             <div class="global-evolution-inner">
-              <h3>Global Evolution</h3>
-              <span>Details</span>
+              <h3>Calculator</h3>
+              <span>Web App</span>
             </div>
           </li>
         </ul>
@@ -78,7 +102,7 @@
         <span class="mouse-btn"></span>
       </div>
 
-      <div class="portfolio-design row">
+      <div class="portfolio-design row" id="email">
         <div class="design-details col-md-6 col-sm-12">
           <span>Design is Life</span>
           <h3>I Develop Skills Regularly to Keep Me Update</h3>

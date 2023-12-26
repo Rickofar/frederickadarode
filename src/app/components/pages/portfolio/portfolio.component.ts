@@ -6,6 +6,13 @@ import { Component, ElementRef, AfterViewInit } from '@angular/core';
   styleUrls: ['./portfolio.component.scss'],
 })
 export class PortfolioComponent implements AfterViewInit {
+  links = [
+    { name: 'Websites', id: '#website' },
+    { name: 'Video', id: '#video' },
+    { name: 'Web Apps', id: '#app' },
+    { name: 'Email Marketing', id: '#email' },
+  ];
+
   private observer: IntersectionObserver | undefined;
 
   constructor(private elementRef: ElementRef) {}
