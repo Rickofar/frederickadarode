@@ -3,7 +3,7 @@
 - 🌱 I’m Passionate Ionic Angular developer dedicated to crafting visually appealing, user-centric mobile and web applications
 - 💞️ I’m looking to collaborate on web or mobile app development
 - I am opened to new opportunities
-- 📫 How to reach me https://wa.me/2348179290343
+- 📫 How to reach me https://wa.me/2348133225761
 
 # MyPortfolio
 
