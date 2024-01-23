@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
+    "build": "ng build --configuration=production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -41,7 +41,7 @@
         "architect": {
           "build": {
             "options": {
-              "outputPath": "dist/my-portfolio",
+              "outputPath": "dist/",
               "index": "src/index.html",
               "main": "src/main.ts",
               "polyfills": "src/polyfills.ts",

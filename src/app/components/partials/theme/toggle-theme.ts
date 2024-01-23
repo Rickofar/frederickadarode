@@ -11,7 +11,7 @@ import { ColorModeService } from 'src/app/services/color-mode.service';
       div {
         position: fixed;
         bottom: 1rem;
-        right: 2rem;
+        left: 2rem;
         display: flex;
         flex-direction: column;
         align-items: center;
