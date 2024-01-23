@@ -10,7 +10,7 @@ import { ColorModeService } from 'src/app/services/color-mode.service';
     `
       div {
         position: fixed;
-        bottom: 5rem;
+        bottom: 1rem;
         right: 2rem;
         display: flex;
         flex-direction: column;
@@ -42,7 +42,7 @@ import { ColorModeService } from 'src/app/services/color-mode.service';
       button {
         color: var(--button-text-color);
         background: var(--button-background);
-        font-size: 0.8rem;
+        font-size: 0.6rem;
         padding: 0.5rem;
         border: none;
         outline: none;

@@ -27,6 +27,13 @@ export class AppComponent implements OnInit {
     );
 
     document.documentElement.style.setProperty(
+      '--footer-color',
+      // isDarkMode ? '#3d3f4a' : '#f5f5f5'
+      // isDarkMode ? '#6f6b80' : '#897fb7'
+      isDarkMode ? '#6f6b80' : '#6f6b80'
+    );
+
+    document.documentElement.style.setProperty(
       '--off-white-color',
       isDarkMode ? '#cacaca' : '#6f6b80'
     );

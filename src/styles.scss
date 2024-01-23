@@ -19,6 +19,10 @@ li {
   list-style-type: none;
 }
 
+p {
+  color: var(--text-color);
+}
+
 // home content
 .page-content {
   margin: 5rem auto;
@@ -37,7 +41,8 @@ li {
   left: 50%;
   padding: 0;
   transform: translateX(-50%);
-  bottom: 1rem;
+  bottom: 5rem;
+  z-index: -1;
 
   .mouse {
     border: 2px solid var(--button-background);

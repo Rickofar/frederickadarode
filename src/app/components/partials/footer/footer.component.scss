@@ -1,0 +1,55 @@
+.containter {
+  background-color: var(--footer-color);
+  transition: background-color 0.3s ease;
+  padding: 0.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  color: #5982e0;
+  box-shadow: 0 0 5px #5074cf;
+
+  .social {
+    padding-left: 24px;
+    position: relative;
+    padding-top: 5px;
+
+    ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      gap: 1rem;
+      align-content: center;
+
+      li {
+        a {
+          padding: 0.2rem;
+        }
+
+        .facebook:hover {
+          background: #502afc;
+          border-radius: 0.3rem;
+        }
+
+        .twitter:hover {
+          background: #6947ff;
+          border-radius: 0.3rem;
+        }
+
+        .linkedIn:hover {
+          background: #8067f0;
+          border-radius: 0.3rem;
+        }
+      }
+    }
+
+    img {
+      height: 15px;
+    }
+  }
+
+  p{
+    font-size: 0.7rem;
+  }
+}

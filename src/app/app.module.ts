@@ -9,6 +9,7 @@ import { GoToTopComponent } from './components/partials/go-to-top/go-to-top.comp
 import { AboutComponent } from './components/pages/about/about.component';
 import { DarkModeToggleComponent } from './components/partials/theme/toggle-theme';
 import { PortfolioComponent } from './components/pages/portfolio/portfolio.component';
+import { FooterComponent } from './components/partials/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { PortfolioComponent } from './components/pages/portfolio/portfolio.compo
     AboutComponent,
     DarkModeToggleComponent,
     PortfolioComponent,
+    FooterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],

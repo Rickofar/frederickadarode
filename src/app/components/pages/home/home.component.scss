@@ -126,7 +126,7 @@
         .social {
           padding-left: 24px;
           position: relative;
-          padding-top: 15px;
+          padding-top: 5px;
 
           ul {
             display: flex;
@@ -134,6 +134,27 @@
             padding: 0;
             gap: 1rem;
             align-content: center;
+
+            li {
+              a {
+                padding: 0.2rem;
+              }
+
+              .facebook:hover {
+                background: #502afc;
+                border-radius: 0.3rem;
+              }
+
+              .twitter:hover {
+                background: #6947ff;
+                border-radius: 0.3rem;
+              }
+
+              .linkedIn:hover {
+                background: #8067f0;
+                border-radius: 0.3rem;
+              }
+            }
           }
 
           img {
