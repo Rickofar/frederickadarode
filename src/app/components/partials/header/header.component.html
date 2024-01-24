@@ -32,9 +32,9 @@
       </li>
       <li>
         <a
-          (click)="goToPage('service')"
-          [ngClass]="{ active: activeTab === 'service' }"
-          >Service</a
+          (click)="goToPage('services')"
+          [ngClass]="{ active: activeTab === 'services' }"
+          >Services</a
         >
       </li>
       <li>
@@ -63,7 +63,9 @@
         item.name
       }}</a>
     </div>
-    <a (click)="downloadResume()" class="mbDownload"><span>Download CV</span></a>
+    <a (click)="downloadResume()" class="mbDownload"
+      ><span>Download CV</span></a
+    >
     <a (click)="isOpen = !isOpen" class="outside">X</a>
   </div>
 </div>

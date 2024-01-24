@@ -41,7 +41,7 @@ export class HeaderComponent implements OnInit {
     { name: 'Home', url: '/' },
     { name: 'About', url: '/about' },
     { name: 'Portfolio', url: '/portfolio' },
-    { name: 'Service', url: '/service' },
+    { name: 'Services', url: '/services' },
     { name: 'Contact', url: '/contact' },
   ];
   activeTab!: string;

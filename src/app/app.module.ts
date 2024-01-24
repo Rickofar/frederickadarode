@@ -10,6 +10,8 @@ import { AboutComponent } from './components/pages/about/about.component';
 import { DarkModeToggleComponent } from './components/partials/theme/toggle-theme';
 import { PortfolioComponent } from './components/pages/portfolio/portfolio.component';
 import { FooterComponent } from './components/partials/footer/footer.component';
+import { ServicesComponent } from './components/pages/services/services.component';
+import { WebDevModalComponent } from './components/partials/web-dev-modal/web-dev-modal.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { FooterComponent } from './components/partials/footer/footer.component';
     DarkModeToggleComponent,
     PortfolioComponent,
     FooterComponent,
+    ServicesComponent,
+    WebDevModalComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
