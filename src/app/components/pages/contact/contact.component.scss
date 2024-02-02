@@ -1,0 +1,103 @@
+.page-content {
+  margin: 5rem auto 0rem;
+  height: calc(90vh - 5rem);
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8rem 0 0;
+
+  .intro {
+    width: 50%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+
+    span {
+      font-size: 20px;
+      color: var(--text-color);
+      margin: 1rem auto;
+    }
+
+    h1 {
+      font-size: 30px;
+      color: #5074cf;
+    }
+
+    .job {
+      margin: 1rem 0;
+
+      p {
+        font-size: 1.2rem;
+        width: 55%;
+        text-align: center;
+        margin: auto;
+        color: var(--text-color);
+
+        #green {
+          font-size: 1.2rem;
+          color: #1cbe59;
+        }
+      }
+    }
+
+    .social {
+      padding-left: 24px;
+      position: relative;
+      padding-top: 5px;
+
+      ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        gap: 1rem;
+        align-content: center;
+        justify-content: center;
+
+        li {
+          a {
+            padding: 0.2rem;
+          }
+
+          .facebook:hover {
+            background: #502afc;
+            border-radius: 0.3rem;
+          }
+
+          .twitter:hover {
+            background: #6947ff;
+            border-radius: 0.3rem;
+          }
+
+          .linkedIn:hover {
+            background: #8067f0;
+            border-radius: 0.3rem;
+          }
+        }
+      }
+
+      img {
+        height: 15px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1040px) {
+    flex-direction: column-reverse;
+
+    .intro {
+      margin: 1.5rem auto;
+      width: 100%;
+
+      span {
+        font-size: 1rem;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

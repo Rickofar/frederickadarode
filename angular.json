@@ -17,14 +17,18 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/my-portfolio",
+            "outputPath": "dist/myPortfolio",
+            "allowedCommonJsDependencies": ["file-saver"],
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.scss"],
+            "styles": [
+              "node_modules/font-awesome/css/font-awesome.min.css",
+              "src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -32,15 +36,16 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "5mb",
-                  "maximumError": "3mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "5mb",
-                  "maximumError": "3mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
                 }
               ],
+
               "outputHashing": "all"
             },
             "development": {
@@ -56,12 +61,12 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "myPortfolio:build:development"
-          },
           "configurations": {
             "production": {
-              "browserTarget": "myPortfolio:build:production"
+              "buildTarget": "myPortfolio:build:production"
+            },
+            "development": {
+              "buildTarget": "myPortfolio:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -69,7 +74,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "myPortfolio:build"
+            "buildTarget": "myPortfolio:build"
           }
         },
         "test": {

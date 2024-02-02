@@ -3,6 +3,7 @@
   height: auto;
   clear: both;
   float: left;
+  margin-bottom: calc(50vh - 5rem);
 
   .portfolio.row {
     display: grid;
@@ -99,7 +100,7 @@
 
         .portfolio1 {
           height: 480px;
-          background: url(/assets/days_n_nights.png);
+          background: url("/assets/days_n_nights.png");
           background-size: 100% 100%;
           border-radius: 15px;
           background-position: center;
@@ -120,7 +121,7 @@
 
         .portfolio2 {
           height: 240px;
-          background: url(/assets/bonny.png);
+          background: url("/assets/bonny.png");
           background-size: 100% 100%;
           border-radius: 15px;
           background-position: center;
@@ -139,7 +140,7 @@
 
         .portfolio3 {
           height: 480px;
-          background: url(/assets/lmv.png);
+          background: url("/assets/lmv.png");
           background-size: 100% 100%;
           border-radius: 15px;
           background-position: center;
@@ -160,7 +161,7 @@
 
         .portfolio4 {
           height: 240px;
-          background: url(/assets/clock.png);
+          background: url("/assets/clock.png");
           background-size: 100%;
           border-radius: 15px;
           background-position: center;
@@ -181,7 +182,7 @@
 
         .portfolio5 {
           height: 480px;
-          background: url(/assets/cactus.png);
+          background: url("/assets/cactus.png");
           background-size: 100% 100%;
           border-radius: 15px;
           background-position: center;
@@ -202,7 +203,7 @@
 
         .portfolio6 {
           height: 240px;
-          background: url(/assets/calculator.png);
+          background: url("/assets/calculator.png");
           background-size: 100% 100%;
           border-radius: 15px;
           background-position: center;
@@ -241,6 +242,7 @@
         margin-bottom: 17px;
         padding-right: 30px;
         color: #5074cf;
+        line-height: 1.2;
       }
 
       p {
@@ -391,6 +393,8 @@
   }
 
   @media screen and (max-width: 1040px) {
+    margin-bottom: calc(100vh - 5rem);
+
     .portfolio.row {
       .portfolio {
         .portfolio-head {
@@ -576,7 +580,13 @@
     }
   }
 
+  @media screen and (max-width: 1024px) {
+    margin-bottom: calc(120% - 5rem);
+  }
+
   @media screen and (max-width: 768px) {
+    margin-bottom: calc(30vh - 5rem);
+
     .portfolio.row {
       margin: auto;
       padding: 10px;
@@ -741,6 +751,8 @@
   }
 
   @media screen and (max-width: 430px) {
+    margin-bottom: calc(20% - 5rem);
+
     .portfolio-gallery {
       display: grid;
       margin-top: 140px;

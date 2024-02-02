@@ -28,9 +28,7 @@ export class AppComponent implements OnInit {
 
     document.documentElement.style.setProperty(
       '--footer-color',
-      // isDarkMode ? '#3d3f4a' : '#f5f5f5'
-      // isDarkMode ? '#6f6b80' : '#897fb7'
-      isDarkMode ? '#6f6b80' : '#6f6b80'
+      isDarkMode ? '#6f6b80' : '#e8eaff'
     );
 
     document.documentElement.style.setProperty(
@@ -44,13 +42,18 @@ export class AppComponent implements OnInit {
     );
 
     document.documentElement.style.setProperty(
+      '--modal-background-color',
+      isDarkMode ? '#9195ae' : '#d7dbed'
+    );
+
+    document.documentElement.style.setProperty(
       '--tab-button-color',
       isDarkMode ? '#fff' : '#768cff'
     );
 
     document.documentElement.style.setProperty(
       '--filter-color',
-      isDarkMode ? '#333' : '#f5f5f5'
+      isDarkMode ? '#333' : '#333'
     );
 
     document.documentElement.style.setProperty(

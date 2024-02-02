@@ -12,11 +12,16 @@ import { PortfolioComponent } from './components/pages/portfolio/portfolio.compo
 import { FooterComponent } from './components/partials/footer/footer.component';
 import { ServicesComponent } from './components/pages/services/services.component';
 import { WebDevModalComponent } from './components/partials/web-dev-modal/web-dev-modal.component';
+import { WebAppModalComponent } from './components/partials/web-app-modal/web-app-modal.component';
+import { UxModalComponent } from './components/partials/ux-modal/ux-modal.component';
+import { LyricsModalComponent } from './components/partials/lyrics-modal/lyrics-modal.component';
+import { ContactComponent } from './components/pages/contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    ContactComponent,
     HomeComponent,
     GoToTopComponent,
     AboutComponent,
@@ -25,6 +30,9 @@ import { WebDevModalComponent } from './components/partials/web-dev-modal/web-de
     FooterComponent,
     ServicesComponent,
     WebDevModalComponent,
+    WebAppModalComponent,
+    UxModalComponent,
+    LyricsModalComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],

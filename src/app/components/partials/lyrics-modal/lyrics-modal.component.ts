@@ -1,12 +1,12 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'webDev-modal',
-  templateUrl: './web-dev-modal.component.html',
-  styleUrls: ['./web-dev-modal.component.scss'],
+  selector: 'lyrics-modal',
+  templateUrl: './lyrics-modal.component.html',
+  styleUrl: './lyrics-modal.component.scss',
 })
-export class WebDevModalComponent {
+export class LyricsModalComponent {
   @Input() showModal!: boolean;
   @Output() closeModal = new EventEmitter<void>();
 

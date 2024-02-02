@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { WebDevModalComponent } from '../../partials/web-dev-modal/web-dev-modal.component';
-import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-services',
@@ -8,19 +6,44 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./services.component.scss'],
 })
 export class ServicesComponent implements OnInit {
-  constructor(public dialog: MatDialog) {}
+  webDevModal: boolean = false;
+  webAppModal: boolean = false;
+  uxModal: boolean = false;
+  lyricModal: boolean = false;
+
+  constructor() {}
 
   ngOnInit(): void {}
 
-  async webDevModal() {
-    const dialogRef = this.dialog.open(WebDevModalComponent, {
-      width: '400px',
-      data: {},
-      panelClass: 'webDevModal',
-    });
+  openWebDevModal() {
+    this.webDevModal = true;
+  }
 
-    dialogRef.afterClosed().subscribe(() => {
-      console.log('Modal dismissed');
-    });
+  closeWebDevModal() {
+    this.webDevModal = false;
+  }
+
+  openWebAppModal() {
+    this.webAppModal = true;
+  }
+
+  closeWebAppModal() {
+    this.webAppModal = false;
+  }
+
+  openUxModal() {
+    this.uxModal = true;
+  }
+
+  closeUxModal() {
+    this.uxModal = false;
+  }
+
+  openLyricModal() {
+    this.lyricModal = true;
+  }
+
+  closeLyricModal() {
+    this.lyricModal = false;
   }
 }

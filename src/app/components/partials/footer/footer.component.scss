@@ -1,4 +1,4 @@
-.containter {
+.container {
   background-color: var(--footer-color);
   transition: background-color 0.3s ease;
   padding: 0.5rem 2rem;
@@ -9,6 +9,9 @@
   height: 5rem;
   color: #5982e0;
   box-shadow: 0 0 5px #5074cf;
+  position: relative;
+  top: calc(20vh - 5rem);
+  z-index: -3;
 
   .social {
     padding-left: 24px;
@@ -49,7 +52,25 @@
     }
   }
 
-  p{
+  p {
     font-size: 0.7rem;
+  }
+}
+
+@media (min-width: 390px) and (max-width: 420px) {
+  .container {
+    top: calc(40vh - 5rem);
+  }
+}
+
+@media (min-width: 360px) and (max-width: 389px) {
+  .container {
+    top: calc(60vh - 5rem);
+  }
+}
+
+@media (max-width: 359px) {
+  .container {
+    top: calc(100vh - 5rem);
   }
 }

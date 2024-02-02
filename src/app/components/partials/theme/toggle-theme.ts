@@ -18,18 +18,19 @@ import { ColorModeService } from 'src/app/services/color-mode.service';
         opacity: 0;
         transition: all 1s ease-in-out;
         visibility: visible;
+        z-index: 9999;
         animation: showToggle 3s forwards;
       }
 
       @keyframes showToggle {
         0% {
-          right: -2rem;
+          left: -2rem;
           visibility: hidden;
           opacity: 0;
         }
 
         50% {
-          right: 2rem;
+          left: 2rem;
           opacity: 1;
           visibility: visible;
         }
