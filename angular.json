@@ -17,18 +17,15 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/myPortfolio",
+            "outputPath": "dist/my-portfolio",
             "allowedCommonJsDependencies": ["file-saver"],
             "index": "src/index.html",
             "main": "src/main.ts",
-            "polyfills": ["zone.js"],
+            "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
+            "aot": true,
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": [
-              "node_modules/font-awesome/css/font-awesome.min.css",
-              "src/styles.scss"
-            ],
+            "styles": ["src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -45,7 +42,6 @@
                   "maximumError": "5mb"
                 }
               ],
-
               "outputHashing": "all"
             },
             "development": {
@@ -82,7 +78,6 @@
           "options": {
             "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
-            "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles.scss"],
             "scripts": []
