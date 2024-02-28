@@ -14,10 +14,6 @@
   .site-logo {
     width: 20%;
     cursor: pointer;
-
-    img {
-      height: 50px;
-    }
   }
 
   nav {
@@ -64,6 +60,12 @@
   a:hover {
     color: #fff !important;
   }
+
+  .site-logo {
+    img {
+      height: 30px;
+    }
+  }
 }
 
 .navbar-at-top {
@@ -84,6 +86,12 @@
 
   a:hover {
     color: var(--off-white-color) !important;
+  }
+
+  .site-logo {
+    img {
+      height: 50px;
+    }
   }
 }
 
