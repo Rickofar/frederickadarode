@@ -29,10 +29,10 @@ p {
 
 .page-content {
   margin: 5rem auto 5rem;
-  height: calc(100vh - 5rem);
+  // height: calc(100vh - 5rem);
 
   @media screen and (max-width: 375px) {
-    height: calc(100vh - 10rem);
+    // height: calc(100vh - 10rem);
   }
 }
 
