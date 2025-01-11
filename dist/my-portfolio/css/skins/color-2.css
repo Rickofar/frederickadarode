@@ -1,0 +1,5 @@
+:root {
+  --main-color: #f384a0;
+  --ion-background-color: var(--main-color);
+  --ion-tab-color: #f0f0f0; /* Light gray track color */
+}
