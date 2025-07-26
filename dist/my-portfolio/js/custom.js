@@ -61,24 +61,18 @@ if ($("body").hasClass("side-header")) {
     tabsContainer = document.querySelector(".about-tabs");
 
   tabsContainer.addEventListener("click", (event) => {
-    /* if event.target.classList.contains 'tab-item' class and not contains
-        'active' class */
     if (
       event.target.classList.contains("tab-item") &&
       !event.target.classList.contains("active")
     ) {
       const target = event.target.getAttribute("data-target");
-      // deactivate existing active 'tab-item'
       tabsContainer.querySelector(".active").classList.remove("active");
-      //activate new 'tab-item'
       event.target.classList.add("active");
 
-      //deactivate existing active 'tab-content'
       aboutSection
         .querySelector(".tab-content.active")
         .classList.remove("active");
 
-      //activate new 'tab-content'
       aboutSection.querySelector(target).classList.add("active");
     }
   });
@@ -150,10 +144,8 @@ $(window).load(function () {
 $(document).ready(function () {
   $("#owl-demo").owlCarousel({
     navigation: false, // Show next and prev buttons
-
     slideSpeed: 300,
     paginationSpeed: 400,
-
     items: 1,
     itemsDesktop: false,
     itemsDesktopSmall: false,

@@ -1,7 +1,4 @@
-// This JavaScript code enables the typewriter function //
-
 // Type Writer 1 //
-
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 const textArray = ["a Developer", "a Designer", "an Animator", "a Freelancer"];
@@ -23,12 +20,10 @@ function type() {
     setTimeout(erase, newTextDelay);
   }
 }
+
 function erase() {
   if (charIndex > 0) {
-    typedTextSpan.textContent = textArray[textArrayIndex].substring(
-      0,
-      charIndex - 1
-    );
+    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
     charIndex--;
     setTimeout(erase, erasingDelay);
   } else {
@@ -38,12 +33,12 @@ function erase() {
     setTimeout(type, typingDelay + 1100);
   }
 }
+
 document.addEventListener("DOMContentLoaded", function () {
   if (textArray.length) setTimeout(type, newTextDelay + 250);
 });
 
 // Type Writer 2 //
-
 const typed_TextSpan = document.querySelector(".about-typed-text");
 const cursor_Span = document.querySelector(".cursor");
 const text_Array = ["a Developer", "a Designer", "an Animator", "a Freelancer"];
@@ -57,8 +52,7 @@ function typ() {
   if (char_Index < text_Array[textArray_Index].length) {
     if (!cursor_Span.classList.contains("typing"))
       cursor_Span.classList.add("typing");
-    typed_TextSpan.textContent +=
-      text_Array[textArray_Index].charAt(char_Index);
+    typed_TextSpan.textContent += text_Array[textArray_Index].charAt(char_Index);
     char_Index++;
     setTimeout(typ, typing_Delay);
   } else {
@@ -66,12 +60,10 @@ function typ() {
     setTimeout(eras, newText_Delay);
   }
 }
+
 function eras() {
   if (char_Index > 0) {
-    typed_TextSpan.textContent = text_Array[textArray_Index].substring(
-      0,
-      char_Index - 1
-    );
+    typed_TextSpan.textContent = text_Array[textArray_Index].substring(0, char_Index - 1);
     char_Index--;
     setTimeout(eras, erasing_Delay);
   } else {
@@ -81,6 +73,7 @@ function eras() {
     setTimeout(typ, typing_Delay + 1100);
   }
 }
+
 document.addEventListener("DOMContentLoaded", function () {
   if (text_Array.length) setTimeout(typ, newText_Delay + 250);
 });
