@@ -26,451 +26,602 @@
 
 .mbri-add-submenu:before {
   content: "\e900";
+  color: var(--main-color);
 }
 .mbri-alert:before {
   content: "\e901";
+  color: var(--main-color);
 }
 .mbri-align-center:before {
   content: "\e902";
+  color: var(--main-color);
 }
 .mbri-align-justify:before {
   content: "\e903";
+  color: var(--main-color);
 }
 .mbri-align-left:before {
   content: "\e904";
+  color: var(--main-color);
 }
 .mbri-align-right:before {
   content: "\e905";
+  color: var(--main-color);
 }
 .mbri-android:before {
   content: "\e906";
+  color: var(--main-color);
 }
 .mbri-apple:before {
   content: "\e907";
+  color: var(--main-color);
 }
 .mbri-arrow-down:before {
   content: "\e908";
+  color: var(--main-color);
 }
 .mbri-arrow-next:before {
   content: "\e909";
+  color: var(--main-color);
 }
 .mbri-arrow-prev:before {
   content: "\e90a";
+  color: var(--main-color);
 }
 .mbri-arrow-up:before {
   content: "\e90b";
+  color: var(--main-color);
 }
 .mbri-bold:before {
   content: "\e90c";
+  color: var(--main-color);
 }
 .mbri-bookmark:before {
   content: "\e90d";
+  color: var(--main-color);
 }
 .mbri-bootstrap:before {
   content: "\e90e";
+  color: var(--main-color);
 }
 .mbri-briefcase:before {
   content: "\e90f";
+  color: var(--main-color);
 }
 .mbri-browse:before {
   content: "\e910";
+  color: var(--main-color);
 }
 .mbri-bulleted-list:before {
   content: "\e911";
+  color: var(--main-color);
 }
 .mbri-calendar:before {
   content: "\e912";
+  color: var(--main-color);
 }
 .mbri-camera:before {
   content: "\e913";
+  color: var(--main-color);
 }
 .mbri-cart-add:before {
   content: "\e914";
+  color: var(--main-color);
 }
 .mbri-cart-full:before {
   content: "\e915";
+  color: var(--main-color);
 }
 .mbri-cash:before {
   content: "\e916";
+  color: var(--main-color);
 }
 .mbri-change-style:before {
   content: "\e917";
+  color: var(--main-color);
 }
 .mbri-chat:before {
   content: "\e918";
+  color: var(--main-color);
 }
 .mbri-clock:before {
   content: "\e919";
+  color: var(--main-color);
 }
 .mbri-close:before {
   content: "\e91a";
+  color: var(--main-color);
 }
 .mbri-cloud:before {
   content: "\e91b";
+  color: var(--main-color);
 }
 .mbri-code:before {
   content: "\e91c";
+  color: var(--main-color);
 }
 .mbri-contact-form:before {
   content: "\e91d";
+  color: var(--main-color);
 }
 .mbri-credit-card:before {
   content: "\e91e";
+  color: var(--main-color);
 }
 .mbri-cursor-click:before {
   content: "\e91f";
+  color: var(--main-color);
 }
 .mbri-cust-feedback:before {
   content: "\e920";
+  color: var(--main-color);
 }
 .mbri-database:before {
   content: "\e921";
+  color: var(--main-color);
 }
 .mbri-delivery:before {
   content: "\e922";
+  color: var(--main-color);
 }
 .mbri-desktop:before {
   content: "\e923";
+  color: var(--main-color);
 }
 .mbri-devices:before {
   content: "\e924";
+  color: var(--main-color);
 }
 .mbri-down:before {
   content: "\e925";
+  color: var(--main-color);
 }
 .mbri-download:before {
   content: "\e926";
+  color: var(--main-color);
 }
 .mbri-drag-n-drop:before {
   content: "\e927";
+  color: var(--main-color);
 }
 .mbri-drag-n-drop2:before {
   content: "\e928";
+  color: var(--main-color);
 }
 .mbri-edit:before {
   content: "\e929";
+  color: var(--main-color);
 }
 .mbri-edit2:before {
   content: "\e92a";
+  color: var(--main-color);
 }
 .mbri-error:before {
   content: "\e92b";
+  color: var(--main-color);
 }
 .mbri-extension:before {
   content: "\e92c";
+  color: var(--main-color);
 }
 .mbri-features:before {
   content: "\e92d";
+  color: var(--main-color);
 }
 .mbri-file:before {
   content: "\e92e";
+  color: var(--main-color);
 }
 .mbri-flag:before {
   content: "\e92f";
+  color: var(--main-color);
 }
 .mbri-folder:before {
   content: "\e930";
+  color: var(--main-color);
 }
 .mbri-gift:before {
   content: "\e931";
+  color: var(--main-color);
 }
 .mbri-github:before {
   content: "\e932";
+  color: var(--main-color);
 }
 .mbri-globe-2:before {
   content: "\e933";
+  color: var(--main-color);
 }
 .mbri-globe:before {
   content: "\e934";
+  color: var(--main-color);
 }
 .mbri-growing-chart:before {
   content: "\e935";
+  color: var(--main-color);
 }
 .mbri-hearth:before {
   content: "\e936";
+  color: var(--main-color);
 }
 .mbri-help:before {
   content: "\e937";
+  color: var(--main-color);
 }
 .mbri-home:before {
   content: "\e938";
+  color: var(--main-color);
 }
 .mbri-hot-cup:before {
   content: "\e939";
+  color: var(--main-color);
 }
 .mbri-idea:before {
   content: "\e93a";
+  color: var(--main-color);
 }
 .mbri-image-gallery:before {
   content: "\e93b";
+  color: var(--main-color);
 }
 .mbri-image-slider:before {
   content: "\e93c";
+  color: var(--main-color);
 }
 .mbri-info:before {
   content: "\e93d";
+  color: var(--main-color);
 }
 .mbri-italic:before {
   content: "\e93e";
+  color: var(--main-color);
 }
 .mbri-key:before {
   content: "\e93f";
+  color: var(--main-color);
 }
 .mbri-laptop:before {
   content: "\e940";
+  color: var(--main-color);
 }
 .mbri-layers:before {
   content: "\e941";
+  color: var(--main-color);
 }
 .mbri-left-right:before {
   content: "\e942";
+  color: var(--main-color);
 }
 .mbri-left:before {
   content: "\e943";
+  color: var(--main-color);
 }
 .mbri-letter:before {
   content: "\e944";
+  color: var(--main-color);
 }
 .mbri-like:before {
   content: "\e945";
+  color: var(--main-color);
 }
 .mbri-link:before {
   content: "\e946";
+  color: var(--main-color);
 }
 .mbri-lock:before {
   content: "\e947";
+  color: var(--main-color);
 }
 .mbri-login:before {
   content: "\e948";
+  color: var(--main-color);
 }
 .mbri-logout:before {
   content: "\e949";
+  color: var(--main-color);
 }
 .mbri-magic-stick:before {
   content: "\e94a";
+  color: var(--main-color);
 }
 .mbri-map-pin:before {
   content: "\e94b";
+  color: var(--main-color);
 }
 .mbri-menu:before {
   content: "\e94c";
+  color: var(--main-color);
 }
 .mbri-mobile:before {
   content: "\e94d";
+  color: var(--main-color);
 }
 .mbri-mobile2:before {
   content: "\e94e";
+  color: var(--main-color);
 }
 .mbri-mobirise:before {
   content: "\e94f";
+  color: var(--main-color);
 }
 .mbri-more-horizontal:before {
   content: "\e950";
+  color: var(--main-color);
 }
 .mbri-more-vertical:before {
   content: "\e951";
+  color: var(--main-color);
 }
 .mbri-music:before {
   content: "\e952";
+  color: var(--main-color);
 }
 .mbri-new-file:before {
   content: "\e953";
+  color: var(--main-color);
 }
 .mbri-numbered-list:before {
   content: "\e954";
+  color: var(--main-color);
 }
 .mbri-opened-folder:before {
   content: "\e955";
+  color: var(--main-color);
 }
 .mbri-pages:before {
   content: "\e956";
+  color: var(--main-color);
 }
 .mbri-paper-plane:before {
   content: "\e957";
+  color: var(--main-color);
 }
 .mbri-paperclip:before {
   content: "\e958";
+  color: var(--main-color);
 }
 .mbri-photo:before {
   content: "\e959";
+  color: var(--main-color);
 }
 .mbri-photos:before {
   content: "\e95a";
+  color: var(--main-color);
 }
 .mbri-pin:before {
   content: "\e95b";
+  color: var(--main-color);
 }
 .mbri-play:before {
   content: "\e95c";
+  color: var(--main-color);
 }
 .mbri-plus:before {
   content: "\e95d";
+  color: var(--main-color);
 }
 .mbri-preview:before {
   content: "\e95e";
+  color: var(--main-color);
 }
 .mbri-print:before {
   content: "\e95f";
+  color: var(--main-color);
 }
 .mbri-protect:before {
   content: "\e960";
+  color: var(--main-color);
 }
 .mbri-question:before {
   content: "\e961";
+  color: var(--main-color);
 }
 .mbri-quote-left:before {
   content: "\e962";
+  color: var(--main-color);
 }
 .mbri-quote-right:before {
   content: "\e963";
+  color: var(--main-color);
 }
 .mbri-redo:before {
   content: "\e964";
+  color: var(--main-color);
 }
 .mbri-refresh:before {
   content: "\e965";
+  color: var(--main-color);
 }
 .mbri-responsive:before {
   content: "\e966";
+  color: var(--main-color);
 }
 .mbri-right:before {
   content: "\e967";
+  color: var(--main-color);
 }
 .mbri-rocket:before {
   content: "\e968";
+  color: var(--main-color);
 }
 .mbri-sad-face:before {
   content: "\e969";
+  color: var(--main-color);
 }
 .mbri-sale:before {
   content: "\e96a";
+  color: var(--main-color);
 }
 .mbri-save:before {
   content: "\e96b";
+  color: var(--main-color);
 }
 .mbri-search:before {
   content: "\e96c";
+  color: var(--main-color);
 }
 .mbri-setting:before {
   content: "\e96d";
+  color: var(--main-color);
 }
 .mbri-setting2:before {
   content: "\e96e";
+  color: var(--main-color);
 }
 .mbri-setting3:before {
   content: "\e96f";
+  color: var(--main-color);
 }
 .mbri-share:before {
   content: "\e970";
+  color: var(--main-color);
 }
 .mbri-shopping-bag:before {
   content: "\e971";
+  color: var(--main-color);
 }
 .mbri-shopping-basket:before {
   content: "\e972";
+  color: var(--main-color);
 }
 .mbri-shopping-cart:before {
   content: "\e973";
+  color: var(--main-color);
 }
 .mbri-sites:before {
   content: "\e974";
+  color: var(--main-color);
 }
 .mbri-smile-face:before {
   content: "\e975";
+  color: var(--main-color);
 }
 .mbri-speed:before {
   content: "\e976";
+  color: var(--main-color);
 }
 .mbri-star:before {
   content: "\e977";
+  color: var(--main-color);
 }
 .mbri-success:before {
   content: "\e978";
+  color: var(--main-color);
 }
 .mbri-sun:before {
   content: "\e979";
+  color: var(--main-color);
 }
 .mbri-sun2:before {
   content: "\e97a";
+  color: var(--main-color);
 }
 .mbri-tablet-vertical:before {
   content: "\e97b";
+  color: var(--main-color);
 }
 .mbri-tablet:before {
   content: "\e97c";
+  color: var(--main-color);
 }
 .mbri-target:before {
   content: "\e97d";
+  color: var(--main-color);
 }
 .mbri-timer:before {
   content: "\e97e";
+  color: var(--main-color);
 }
 .mbri-to-ftp:before {
   content: "\e97f";
+  color: var(--main-color);
 }
 .mbri-to-local-drive:before {
   content: "\e980";
+  color: var(--main-color);
 }
 .mbri-touch-swipe:before {
   content: "\e981";
+  color: var(--main-color);
 }
 .mbri-touch:before {
   content: "\e982";
+  color: var(--main-color);
 }
 .mbri-trash:before {
   content: "\e983";
+  color: var(--main-color);
 }
 .mbri-underline:before {
   content: "\e984";
+  color: var(--main-color);
 }
 .mbri-undo:before {
   content: "\e985";
+  color: var(--main-color);
 }
 .mbri-unlink:before {
   content: "\e986";
+  color: var(--main-color);
 }
 .mbri-unlock:before {
   content: "\e987";
+  color: var(--main-color);
 }
 .mbri-up-down:before {
   content: "\e988";
+  color: var(--main-color);
 }
 .mbri-up:before {
   content: "\e989";
+  color: var(--main-color);
 }
 .mbri-update:before {
   content: "\e98a";
+  color: var(--main-color);
 }
 .mbri-upload:before {
   content: "\e98b";
+  color: var(--main-color);
 }
 .mbri-user:before {
   content: "\e98c";
+  color: var(--main-color);
 }
 .mbri-user2:before {
   content: "\e98d";
+  color: var(--main-color);
 }
 .mbri-users:before {
   content: "\e98e";
+  color: var(--main-color);
 }
 .mbri-video-play:before {
   content: "\e98f";
+  color: var(--main-color);
 }
 .mbri-video:before {
   content: "\e990";
+  color: var(--main-color);
 }
 .mbri-watch:before {
   content: "\e991";
+  color: var(--main-color);
 }
 .mbri-website-theme:before {
   content: "\e992";
+  color: var(--main-color);
 }
 .mbri-wifi:before {
   content: "\e993";
+  color: var(--main-color);
 }
 .mbri-windows:before {
   content: "\e994";
+  color: var(--main-color);
 }
 .mbri-zoom-out:before {
   content: "\e995";
+  color: var(--main-color);
 }
+ 

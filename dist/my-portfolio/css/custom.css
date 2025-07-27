@@ -589,7 +589,7 @@ nav.sticky .logo-dark {
 }
 
 .about-section .single-skill .skill-progress .progress-bar {
-  background-color: var(--shadow-color);
+  background-color: var(--main-color);
 }
 
 .about-section .resume-section .resume-item {
@@ -631,10 +631,11 @@ nav.sticky .logo-dark {
 ===============================================================*/
 
 .service-section .services-boxes {
-  border: 1px solid var(--nav-color);
+  border: 1px solid var(--main-color);
   padding: 40px;
   border-radius: 10px;
   position: relative;
+  box-shadow: 0 0 5px var(--main-color);
 }
 
 .service-section .services-boxes .services-boxes-icon {
