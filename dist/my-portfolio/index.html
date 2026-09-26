@@ -6,41 +6,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Freelance web developer specializing in creating modern, responsive websites. Check out my portfolio to see my latest projects."
+      content="Frederick Adarode — Full Stack Developer and founder of ADR Systems. Building cloud software for business, education, hospitality, energy, and smart living. Explore my portfolio and the ADR Systems product ecosystem."
     />
     <link
       rel="icon"
       type="image/png"
       href="https://frederickadarode.netlify.app/images/Favicon/icon.png"
-    /> 
+    />
+
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Frederick Adarode" />
+    <meta property="og:title" content="Frederick Adarode | Full Stack Developer & Founder of ADR Systems" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://frederickadarode.netlify.app" />
-    <meta
-      property="og:image"
-      content="https://frederickadarode.netlify.app/images/Favicon/icon.png"
-    />
+    <meta property="og:image" content="https://frederickadarode.netlify.app/images/Favicon/icon.png" />
     <meta
       property="og:description"
-      content="Freelance web developer specializing in creating modern, responsive websites. Check out my portfolio to see my latest projects."
+      content="Full Stack Developer and founder of ADR Systems. Building cloud software for business, education, hospitality, energy, and smart living."
     />
     <meta property="og:site_name" content="Frederick Adarode Portfolio" />
 
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Frederick Adarode" />
+    <meta name="twitter:title" content="Frederick Adarode | Full Stack Developer & Founder of ADR Systems" />
     <meta
       name="twitter:description"
-      content="Freelance web developer specializing in creating modern, responsive websites. Check out my portfolio to see my latest projects."
+      content="Full Stack Developer and founder of ADR Systems. Building cloud software for business, education, hospitality, energy, and smart living."
     />
-    <meta
-      name="twitter:image"
-      content="https://frederickadarode.netlify.app/images/Favicon/icon.png"
-    />
+    <meta name="twitter:image" content="https://frederickadarode.netlify.app/images/Favicon/icon.png" />
     <meta name="twitter:site" content="@rickofar1" />
     <meta name="twitter:creator" content="@rickofar1" />
-    <title>Frederick | Personal Portfolio</title>
+    <title>Frederick Adarode | Full Stack Developer & Founder of ADR Systems</title>
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Frederick Adarode",
+      "url": "https://frederickadarode.netlify.app",
+      "image": "https://frederickadarode.netlify.app/images/Favicon/icon.png",
+      "jobTitle": "Full Stack Developer & Founder",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "ADR Systems",
+        "url": "https://adrsystems.app"
+      },
+      "knowsAbout": [
+        "Full Stack Development",
+        "React",
+        "Next.js",
+        "React Native",
+        "Expo",
+        "Angular",
+        "Ionic Framework",
+        "Node.js",
+        "TypeScript",
+        "SaaS Development",
+        "Multi-tenant Architecture",
+        "Mobile App Development"
+      ],
+      "sameAs": [
+        "https://twitter.com/rickofar1",
+        "https://linkedin.com/in/frederickadarode",
+        "https://github.com/rickofar"
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Products built by Frederick Adarode at ADR Systems",
+      "itemListElement": [
+        {
+          "@type": "SoftwareApplication",
+          "position": 1,
+          "name": "ADR Business Suite",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web, Android",
+          "url": "https://business.adrsystems.app"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "position": 2,
+          "name": "ADR Partners",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "url": "https://partner.adrsystems.app"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "position": 3,
+          "name": "ADR Systems",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "url": "https://adrsystems.app"
+        }
+      ]
+    }
+    </script>
+
     <!---------------------- Favicon Link ------------------------>
     <link rel="icon" type="image/x-icon" href="images/Favicon/favicon7.webp" />
     <!--------------------------- Bootstrap CSS Link -------------------------------->
@@ -102,6 +168,87 @@
       disabled
     />
     <link rel="stylesheet" type="text/css" href="css/style-switcher.css" />
+
+    <!-- ============================================
+         Portfolio card refinements
+         Makes the entire card clickable and removes
+         the nested-link problem.
+         ============================================ -->
+    <style>
+      /* The outer <a> now wraps the whole card and points to the destination */
+      .portfolio-box-link {
+        display: block;
+        position: relative;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .portfolio-box-link .portfolio-box {
+        position: relative;
+        overflow: hidden;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      /* Overlay: appears on hover / focus, hides by default */
+      .portfolio-box-link .dh-overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.65);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 2;
+        text-align: center;
+      }
+
+      .portfolio-box-link:hover .dh-overlay,
+      .portfolio-box-link:focus-visible .dh-overlay {
+        opacity: 1;
+      }
+
+      /* The pill inside the overlay is now purely visual */
+      .portfolio-box-link .portfolio-link {
+        display: inline-block;
+        margin-top: 0.75rem;
+        padding: 6px 18px;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        border-radius: 999px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        background: rgba(255, 255, 255, 0.08);
+        transition: background 0.2s ease, border-color 0.2s ease;
+      }
+
+      .portfolio-box-link:hover .portfolio-link {
+        background: rgba(255, 255, 255, 0.18);
+        border-color: #fff;
+      }
+
+      /* Keyboard accessibility focus ring */
+      .portfolio-box-link:focus-visible {
+        outline: 2px solid var(--accent, #f2a900);
+        outline-offset: 4px;
+        border-radius: 6px;
+      }
+
+      /* Make the img fill nicely */
+      .portfolio-box-link img {
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: transform 0.6s ease;
+      }
+
+      .portfolio-box-link:hover img {
+        transform: scale(1.05);
+      }
+    </style>
   </head>
 
   <body class="side-header" data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="1">
@@ -113,8 +260,8 @@
     <nav class="navbar default-nav fixed-top navbar-expand-lg navbar-dark nav-overlay">
       <div class="container-fluid">
         <a class="navbar-brand pt-0" href="home">
-          <img src="images/Favicon/icon-dark.png" class="img-fluid logo-light" />
-          <img src="images/Favicon/icon.png" class="img-fluid logo-dark" />
+          <img src="images/Favicon/icon-dark.png" class="img-fluid logo-light" alt="Frederick Adarode logo" />
+          <img src="images/Favicon/icon.png" class="img-fluid logo-dark" alt="Frederick Adarode logo" />
         </a>
 
         <!--------- Nav Collapsed Button --------->
@@ -168,7 +315,7 @@
                 I'M <span class="typed-text fw-bold"></span
                 ><span class="cursor">&nbsp;</span>
               </h1>
-              <p class="lead mb-4">Smart Design, Smarter Business.</p>
+              <p class="lead mb-4">Full Stack Developer · Founder of ADR Systems</p>
               <div class="gap-2 d-sm-flex justify-content-sm-center pt-2">
                 <a
                   href="javascript:void(0)"
@@ -196,7 +343,7 @@
         <div class="row align-items-center about-container">
           <div class="col-lg-6">
             <div class="mt-3">
-              <img src="images/Cover/avatar.png" alt="" class="img-class mx-auto d-block img-thumbnail" />
+              <img src="images/Cover/avatar.png" alt="Frederick Adarode portrait" class="img-class mx-auto d-block img-thumbnail" />
             </div>
           </div>
           <div class="col-lg-6">
@@ -206,10 +353,10 @@
                 My name is Frederick Adarode and I'm <span class="about-typed-text"></span><span class="cursor">&nbsp;</span>
               </h5>
               <p class="text-muted mt-3">
-                As a dedicated creative designer, my passion for design drives my unwavering commitment to excellence. I continually invest in professional development to refine my skills and stay ahead in the ever-evolving design landscape.
+                I'm a full stack developer and the founder of <strong>ADR Systems</strong> — a software company building cloud platforms for business, education, hospitality, energy, and smart living. I design, engineer, and ship every product end-to-end.
               </p>
               <p class="text-muted mt-0">
-                With two years of expertise as a frontend web app developer, I specialize in HTML, CSS, JavaScript/TypeScript, Angular, React, NextJS, Expo and the Ionic Framework, seamlessly complemented by backend proficiency in Node.js, Express, and MongoDB. Additionally, I bring experience in email marketing, enabling me to create holistic digital solutions. Fueled by a passion for innovation and a growth mindset, I thrive in collaborative environments where ideas are transformed into extraordinary digital experiences. Let's work together to bring your vision to life!
+                With several years of expertise across the modern stack — HTML, CSS, JavaScript/TypeScript, React, Next.js, React Native, Expo, Angular, and the Ionic Framework — complemented by backend proficiency in Node.js, Express, MySQL, and MongoDB — I turn complex business requirements into clean, working software across web and mobile. My work spans custom client builds, multi-tenant SaaS platforms, cross-platform mobile applications, and analytics integrations. Fueled by a growth mindset and a passion for innovation, I thrive on transforming ideas into reliable digital products that businesses actually use every day.
               </p>
             </div>
             <!-- Social Media Links -->
@@ -217,10 +364,10 @@
               <h5 class="fw-bold">Follow Me</h5>
               <div class="border"></div>
               <div class="social-media-buttons">
-                <a href="http://www.facebook.com/rickofar" target="_blank"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.twitter.com/rickofar1" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.instagram.com/rickofar" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedIn.com/in/frederickadarode" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="http://www.facebook.com/rickofar" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.twitter.com/rickofar1" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/rickofar" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedIn.com/in/frederickadarode" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
               </div>
             </div>
             <!-- Social Media Links -->
@@ -235,35 +382,64 @@
           </div>
         </div>
         <!-- About Tabs End -->
-        
+
         <!-- Skills Tabs Start Here -->
         <div class="skills tab-content active row skill-section">
           <div class="col-12 col-md-6">
             <div class="single-skill" data-percentage="95">
               <div class="skill-info">
-                <span class="skill-name">HTML/CSS</span>
+                <span class="skill-name">HTML / CSS</span>
                 <span class="skill-percentage" style="margin-right: 17.7px">95%</span>
               </div>
               <div class="progress skill-progress">
                 <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="95" style="width: 95%"></div>
               </div>
             </div>
-            <div class="single-skill" data-percentage="70">
+            <div class="single-skill" data-percentage="92">
               <div class="skill-info">
-                <span class="skill-name">JavaScript</span>
-                <span class="skill-percentage" style="margin-right: 17.7px">70%</span>
+                <span class="skill-name">JavaScript / TypeScript</span>
+                <span class="skill-percentage" style="margin-right: 17.7px">92%</span>
               </div>
               <div class="progress skill-progress">
-                <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70" data-value="95%" style="width: 70%"></div>
+                <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="92" style="width: 92%"></div>
               </div>
             </div>
-            <div class="single-skill" data-percentage="80">
+            <div class="single-skill" data-percentage="92">
               <div class="skill-info">
-                <span class="skill-name">SQL</span>
-                <span class="skill-percentage" style="margin-right: 17.7px">80%</span>
+                <span class="skill-name">React / Next.js</span>
+                <span class="skill-percentage" style="margin-right: 17.7px">92%</span>
               </div>
               <div class="progress skill-progress">
-                <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80" style="width: 80%"></div>
+                <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="92" style="width: 92%"></div>
+              </div>
+            </div>
+            <div class="single-skill" data-percentage="88">
+              <div class="skill-info">
+                <span class="skill-name">React Native</span>
+                <span class="skill-percentage" style="margin-right: 17.7px">88%</span>
+              </div>
+              <div class="progress skill-progress">
+                <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="88" style="width: 88%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="single-skill" data-percentage="88">
+              <div class="skill-info">
+                <span class="skill-name">Expo</span>
+                <span class="skill-percentage" style="margin-right: 17.7px">88%</span>
+              </div>
+              <div class="progress skill-progress">
+                <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="88" style="width: 88%"></div>
+              </div>
+            </div>
+            <div class="single-skill" data-percentage="90">
+              <div class="skill-info">
+                <span class="skill-name">Angular</span>
+                <span class="skill-percentage" style="margin-right: 17.7px">90%</span>
+              </div>
+              <div class="progress skill-progress">
+                <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="90" style="width: 90%"></div>
               </div>
             </div>
             <div class="single-skill" data-percentage="90">
@@ -272,65 +448,48 @@
                 <span class="skill-percentage" style="margin-right: 17.7px">90%</span>
               </div>
               <div class="progress skill-progress">
-                <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80" style="width: 80%"></div>
+                <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="90" style="width: 90%"></div>
               </div>
             </div>
-          </div>
-          <div class="col-12 col-md-6">
-            <div class="single-skill" data-percentage="80">
+            <div class="single-skill" data-percentage="88">
               <div class="skill-info">
-                <span class="skill-name">BootStrap</span>
-                <span class="skill-percentage" style="margin-right: 17.7px">80%</span>
+                <span class="skill-name">Node.js / Express</span>
+                <span class="skill-percentage" style="margin-right: 17.7px">88%</span>
               </div>
               <div class="progress skill-progress">
-                <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80" style="width: 80%"></div>
-              </div>
-            </div>
-            <div class="single-skill" data-percentage="95">
-              <div class="skill-info">
-                <span class="skill-name">Angular</span>
-                <span class="skill-percentage" style="margin-right: 17.7px">95%</span>
-              </div>
-              <div class="progress skill-progress">
-                <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80" style="width: 80%"></div>
-              </div>
-            </div>            
-
-            <div class="single-skill" data-percentage="75">
-              <div class="skill-info">
-                <span class="skill-name">React/NextJS</span>
-                <span class="skill-percentage" style="margin-right: 17.7px">75%</span>
-              </div>
-              <div class="progress skill-progress">
-                <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="75" style="width: 75%"></div>
-              </div>
-            </div>
-            <div class="single-skill" data-percentage="85">
-              <div class="skill-info">
-                <span class="skill-name">TypeScript</span>
-                <span class="skill-percentage" style="margin-right: 17.7px">85%</span>
-              </div>
-              <div class="progress skill-progress">
-                <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="85" style="width: 85%" data-value="85%"></div>
+                <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="88" style="width: 88%"></div>
               </div>
             </div>
           </div>
         </div>
         <!-- Skills Tabs End Here -->
-        
+
         <!-- Experience Starts Here -->
         <div class="experience tab-content resume-section single-section">
           <div class="row">
             <div class="col-12 col-md-6">
               <div class="resume-item">
+                <h5 class="item-title">Founder & Lead Engineer</h5>
+                <span class="item-details">ADR Systems - 2024 to Date</span>
+                <p class="item-description">
+                  <li>Founded and lead ADR Systems — building a portfolio of cloud software products for business, education, hospitality, energy, and smart living.</li>
+                  <li>Designed, engineered, and shipped <strong>ADR Business Suite</strong> (flagship multi-module SaaS with inventory, CRM, analytics, and accounting) — including web platform and Android mobile app.</li>
+                  <li>Built <strong>ADR Partners</strong> — the affiliate program and partner portal for promoting ADR Systems' digital products.</li>
+                  <li>Currently developing <strong>ADR Academy</strong> (school management SaaS), <strong>ADR Hotel Management</strong>, <strong>ADR Energy</strong> (solar installation & management), <strong>SmartCrib</strong> (digital smart homes), and <strong>ADR Marketing</strong>.</li>
+                  <li>Own the full stack: architecture, frontend, backend, cloud infrastructure, mobile, and product direction.</li>
+                </p>
+              </div>
+              <div class="resume-item">
                 <h5 class="item-title">Freelance Full Stack Developer</h5>
                 <span class="item-details">Self Employed - 2023 to Date</span>
                 <p class="item-description">
-                  <li>Manage projects independently from conception to delivery, ensuring high-quality and scalable solutions.</li>
-                  <li>Utilize MongoDB, Node.js, Express.js, React, NextJS, Expo, Angular, Ionic Framework, and MySQL to create robust applications tailored to client needs.</li>
-                  <li>Developed ADR Inventory web and desktop applications for small to medium businesses, enhancing inventory management.</li>
+                  <li>Manage client projects independently from conception to delivery, ensuring high-quality and scalable solutions.</li>
+                  <li>Utilize MongoDB, Node.js, Express.js, React, Next.js, React Native, Expo, Angular, Ionic Framework, and MySQL to build robust applications tailored to client needs.</li>
+                  <li>Delivered production web and mobile platforms for artists, real estate, and business clients.</li>
                 </p>
               </div>
+            </div>
+            <div class="col-12 col-md-6">
               <div class="resume-item">
                 <h5 class="item-title">Ionic-Angular Developer</h5>
                 <span class="item-details">Ventis-Inc Nig. Ltd - 2023 to 2023</span>
@@ -341,15 +500,13 @@
                   <li>Conducted code reviews and applied optimization techniques to enhance performance and maintainability.</li>
                 </p>
               </div>
-            </div>
-            <div class="col-12 col-md-6">
               <div class="resume-item">
                 <h5 class="item-title">Retail Sales Manager</h5>
                 <span class="item-details">Radiant Amore Services - 2017 to 2022</span>
                 <p class="item-description">
                   <li>Directed retail operations including inventory management, sales forecasting, and customer service strategies.</li>
                   <li>Developed marketing campaigns through social media, fliers, customized gift items, and in-store promotions.</li>
-                  <li>Trained and mentored sales staff to improve product knowledge and sales techniques, contributing to increased revenue and customer satisfaction.</li>
+                  <li>This role directly inspired ADR Business Suite — built to solve the inventory and reporting problems I dealt with daily.</li>
                 </p>
               </div>
               <div class="resume-item">
@@ -358,13 +515,14 @@
                 <p class="item-description">
                   <li>Developed and delivered lesson plans tailored to diverse learning styles and abilities.</li>
                   <li>Fostered a collaborative classroom environment and organized extracurricular activities.</li>
+                  <li>Classroom experience informs the design of ADR Academy today.</li>
                 </p>
               </div>
             </div>
           </div>
         </div>
         <!-- Experience Ends Here -->
-        
+
         <!-- Education Starts Here -->
         <div class="resume-section single-section tab-content education">
           <div class="row">
@@ -409,12 +567,12 @@
                 <i class="mbri-code"></i>
               </div>
               <div class="mt-2">
-                <h5 class="mb-0">Web Application (Frontend and Backend)</h5>
+                <h5 class="mb-0">SaaS Product Development</h5>
                 <div class="service-dots">
                   <i class="mbri-more-horizontal"></i>
                 </div>
                 <p class="text-muted mt-2">
-                  Empower your business with my comprehensive Web Application Development services. From intuitive frontend interfaces to robust backend functionality, I've got you covered.
+                  End-to-end product builds — from idea and architecture to multi-tenant backend, cloud deployment, and mobile apps. Proven across ADR Business Suite, ADR Academy, and more.
                 </p>
               </div>
             </div>
@@ -425,12 +583,28 @@
                 <i class="mbri-website-theme"></i>
               </div>
               <div class="mt-2">
-                <h5 class="mb-0">Web Design</h5>
+                <h5 class="mb-0">Web Application Development</h5>
                 <div class="service-dots">
                   <i class="mbri-more-horizontal"></i>
                 </div>
                 <p class="text-muted mt-2">
-                  My Web Design and Development Services are crafted to deliver visually stunning, responsive websites that not only captivate but also provide an exceptional user experience. Let me bring your digital vision to life!
+                  Modern, responsive, and scalable web applications built with React, Next.js, Angular, and Node.js. Full frontend and backend delivery.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <div class="text-center services-boxes p-4 mt-4">
+              <div class="services-boxes-icon">
+                <i class="mbri-mobile"></i>
+              </div>
+              <div class="mt-2">
+                <h5 class="mb-0">Mobile App Development</h5>
+                <div class="service-dots">
+                  <i class="mbri-more-horizontal"></i>
+                </div>
+                <p class="text-muted mt-2">
+                  Cross-platform mobile apps with React Native, Expo and Ionic — including ADR Business Suite Mobile for Android. Native-feel experiences, cloud-synced.
                 </p>
               </div>
             </div>
@@ -446,23 +620,7 @@
                   <i class="mbri-more-horizontal"></i>
                 </div>
                 <p class="text-muted mt-2">
-                  Step into the world of seamless digital experiences with my UI/UX Design services. I focus on creating interfaces that not only look visually stunning but also provide an intuitive and enjoyable journey for your users.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-4">
-            <div class="text-center services-boxes p-4 mt-4">
-              <div class="services-boxes-icon">
-                <i class="mbri-camera"></i>
-              </div>
-              <div class="mt-2">
-                <h5 class="mb-0">Lyric Animated Videos</h5>
-                <div class="service-dots">
-                  <i class="mbri-more-horizontal"></i>
-                </div>
-                <p class="text-muted mt-2">
-                  Experience the fusion of creativity and technology with Lyric Animated Videos. I transform your music into captivating visual stories that leave a lasting impression.
+                  Clean, functional interfaces designed for real-world operations. Focused on clarity, usability, and reducing friction for daily users.
                 </p>
               </div>
             </div>
@@ -483,7 +641,7 @@
                   <i class="mbri-clock"></i>
                 </div>
                 <h4 class="text-12 text-muted mb-0">
-                  <span class="counter" data-count="3">0</span>
+                  <span class="counter" id="years-of-experience" data-count="0">0</span>
                 </h4>
                 <p class="mb-0">Years of Experience</p>
               </div>
@@ -516,9 +674,9 @@
                   <i class="mbri-hot-cup"></i>
                 </div>
                 <h4 class="text-12 text-muted mb-0">
-                  <span class="counter" data-count="16">0</span>
+                  <span class="counter" data-count="7">0</span>
                 </h4>
-                <p class="mb-0">Cups Of Coffee</p>
+                <p class="mb-0">Products in Ecosystem</p>
               </div>
             </div>
           </div>
@@ -537,100 +695,180 @@
 
         <div class="portfolio-filter text-center mb-5">
           <span data-filter="*" class="active">All</span>
-          <span data-filter=".web-design"> Web Design</span>
+          <span data-filter=".web-design">Web Apps</span>
+          <span data-filter=".mobile">Mobile</span>
           <span data-filter=".photography">Video</span>
           <span data-filter=".brands">Brands</span>
         </div>
 
         <div class="portfolio row mb-3" id="container">
+          <!-- ADR Business Suite -->
           <div class="grid-item col-md-4 web-design brands mb-4 dh-container">
-            <a class="link" href="https://frederickadarode.netlify.app/images/bonny/bonny-official.jpeg" target="_blank">
+            <a
+              class="portfolio-box-link"
+              href="https://business.adrsystems.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit ADR Business Suite"
+            >
               <div class="portfolio-box">
                 <div class="dh-overlay text-center fw-bold">
-                  Bonny Official Website
-                  <div class="portfolio-link">
-                    <a href="https://bonny-official.com" target="_blank">Visit Site</a>
-                  </div>
+                  ADR Business Suite
+                  <span class="portfolio-link">Visit Site</span>
                 </div>
-                <img src="https://frederickadarode.netlify.app/images/bonny/bonny-official.jpeg" alt="Bonny Official Website" />
+                <img src="images/Clients/adr-business-suite.png" alt="ADR Business Suite — cloud business management platform" />
               </div>
             </a>
           </div>
-          <div class="grid-item col-md-4 brands web-design mb-4 dh-container">
-            <a class="link" href="images/Clients/lmv.png" target="_blank">
+
+          <!-- ADR Business Suite Mobile -->
+          <div class="grid-item col-md-4 mobile brands mb-4 dh-container">
+            <a
+              class="portfolio-box-link"
+              href="https://business.adrsystems.app/download"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download ADR Business Suite Mobile"
+            >
               <div class="portfolio-box">
                 <div class="dh-overlay text-center fw-bold">
-                  LMV Pro Lights
-                  <div class="portfolio-link">
-                    <a href="https://rickofar.github.io/lmv-pro" target="_blank">View Project</a>
-                  </div>
+                  ADR Business Suite Mobile
+                  <span class="portfolio-link">Download APK</span>
                 </div>
-                <img src="images/Clients/lmv.png" alt="LMV Pro Lights" />
+                <img src="images/Clients/adr-business-suite-mobile.png" alt="ADR Business Suite Mobile — Android app for inventory and sales" />
               </div>
             </a>
           </div>
-          <div class="grid-item col-md-4 photography mb-4 dh-container">
-            <a class="link" href="images/Clients/days_n_nights.png" target="_blank">
+
+          <!-- ADR Partners -->
+          <div class="grid-item col-md-4 web-design brands mb-4 dh-container">
+            <a
+              class="portfolio-box-link"
+              href="https://partner.adrsystems.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit ADR Partners"
+            >
               <div class="portfolio-box">
                 <div class="dh-overlay text-center fw-bold">
-                  Days & Nights (Deep Ends)
-                  <div class="portfolio-link">
-                    <a href="#" target="_blank">View Video</a>
-                  </div>
+                  ADR Partners
+                  <span class="portfolio-link">Visit Site</span>
                 </div>
-                <img src="images/Clients/days_n_nights.png" alt="Days & Nights (Deep Ends)" />
+                <img src="images/Clients/adr-partners.png" alt="ADR Partners — affiliate program for ADR Systems products" />
               </div>
             </a>
           </div>
-          <div class="grid-item col-md-4 brands web-design mb-4 dh-container">
-            <a class="link" href="images/Clients/promoImage.png" target="_blank">
+
+          <!-- ADR Systems (corporate) -->
+          <div class="grid-item col-md-4 web-design brands mb-4 dh-container">
+            <a
+              class="portfolio-box-link"
+              href="https://adrsystems.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit ADR Systems"
+            >
               <div class="portfolio-box">
                 <div class="dh-overlay text-center fw-bold">
                   ADR Systems
-                  <div class="portfolio-link">
-                    <a href="https://inventory.adrsystems.app" target="_blank">Visit Site</a>
-                  </div>
+                  <span class="portfolio-link">Visit Site</span>
                 </div>
-                <img src="images/Clients/promoImage.png" alt="ADR Systems" />
+                <img src="images/Clients/adr-systems.png" alt="ADR Systems — software company building cloud products" />
               </div>
             </a>
           </div>
-          <div class="grid-item col-md-4 photography mb-4 dh-container">
-            <a class="link" href="images/Clients/cactus.png" target="_blank">
+
+          <!-- Bonny Official -->
+          <div class="grid-item col-md-4 web-design brands mb-4 dh-container">
+            <a
+              class="portfolio-box-link"
+              href="https://bonny-official.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Bonny Official website"
+            >
               <div class="portfolio-box">
                 <div class="dh-overlay text-center fw-bold">
-                  Cactus
-                  <div class="portfolio-link">
-                    <a href="#" target="_blank">View Video</a>
-                  </div>
+                  Bonny Official Website
+                  <span class="portfolio-link">Visit Site</span>
                 </div>
-                <img src="images/Clients/cactus.png" alt="Cactus" />
+                <img src="https://frederickadarode.netlify.app/images/bonny/bonny-official.jpeg" alt="Bonny Official — artist website with streaming and merch" />
               </div>
             </a>
           </div>
-          <div class="grid-item col-md-4 web-design brands mb-4 dh-container">
-            <a class="link" href="images/Clients/promoImage.png" target="_blank">
+
+          <!-- LMV Pro Lights -->
+          <div class="grid-item col-md-4 brands web-design mb-4 dh-container">
+            <a
+              class="portfolio-box-link"
+              href="https://rickofar.github.io/lmv-pro"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View LMV Pro Lights project"
+            >
               <div class="portfolio-box">
                 <div class="dh-overlay text-center fw-bold">
-                  ADR Inventory
-                  <div class="portfolio-link">
-                    <a href="https://inventory.adrsystems.app" target="_blank">Visit Site</a>
-                  </div>
+                  LMV Pro Lights
+                  <span class="portfolio-link">View Project</span>
                 </div>
-                <img src="images/Clients/promoImage.png" alt="ADR Inventory" />
+                <img src="images/Clients/lmv.png" alt="LMV Pro Lights — brand and product site" />
               </div>
             </a>
           </div>
+
+          <!-- The Property Experts -->
           <div class="grid-item col-md-4 web-design brands mb-4 dh-container">
-            <a class="link" href="https://property-xperts.com/storage/logos/the-property-expert-1-1.png" target="_blank">
+            <a
+              class="portfolio-box-link"
+              href="https://property-xperts.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit The Property Experts"
+            >
               <div class="portfolio-box" style="background: #161e2d; padding: 0.5rem;">
                 <div class="dh-overlay text-center fw-bold">
                   The Property Experts
-                  <div class="portfolio-link">
-                    <a href="https://property-xperts.com" target="_blank">Visit Site</a>
-                  </div>
+                  <span class="portfolio-link">Visit Site</span>
                 </div>
-                <img src="https://property-xperts.com/storage/logos/the-property-expert-1-1.png" alt="The Property Experts" />
+                <img src="./images/Clients/the-property-expert-1-1.jpg" alt="The Property Experts — real estate platform" />
+              </div>
+            </a>
+          </div>
+
+          <!-- Days & Nights (Video) -->
+          <div class="grid-item col-md-4 photography mb-4 dh-container">
+            <a
+              class="portfolio-box-link"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Watch Days and Nights video"
+            >
+              <div class="portfolio-box">
+                <div class="dh-overlay text-center fw-bold">
+                  Days &amp; Nights (Deep Ends)
+                  <span class="portfolio-link">View Video</span>
+                </div>
+                <img src="images/Clients/days_n_nights.png" alt="Days and Nights — lyric animated video" />
+              </div>
+            </a>
+          </div>
+
+          <!-- Cactus (Video) -->
+          <div class="grid-item col-md-4 photography mb-4 dh-container">
+            <a
+              class="portfolio-box-link"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Watch Cactus video"
+            >
+              <div class="portfolio-box">
+                <div class="dh-overlay text-center fw-bold">
+                  Cactus
+                  <span class="portfolio-link">View Video</span>
+                </div>
+                <img src="images/Clients/cactus.png" alt="Cactus — lyric animated video" />
               </div>
             </a>
           </div>
@@ -685,13 +923,13 @@
       <div class="container text-center">
         <div class="row">
           <p>
-            Copyright <span id="current-year"></span> &copy; Frederick Adarode | All Rights Reserved
+            Copyright <span id="current-year"></span> &copy; Frederick Adarode · Founder of ADR Systems | All Rights Reserved
           </p>
           <div class="social-media-buttons">
-            <a href="https://facebook.com/rickofar" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://twitter.com/rickofar1" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://instagram.com/rickofar" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://linkedin.com/in/frederickadarode" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://facebook.com/rickofar" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/rickofar1" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/rickofar" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com/in/frederickadarode" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
       </div>
@@ -704,14 +942,14 @@
         <i class="fas fa-cog fa-spin"></i>
       </div>
       <h4>Theme Colors</h4>
-    <div class="colors">
-  <span class="color-1" onclick="setActiveStyle('color-1')"></span>
-  <span class="color-2" onclick="setActiveStyle('color-2')"></span>
-  <span class="color-3" onclick="setActiveStyle('color-3')"></span>
-  <span class="color-4" onclick="setActiveStyle('color-4')"></span>
-  <span class="color-5" onclick="setActiveStyle('color-5')"></span>
-</div>
-    </div> 
+      <div class="colors">
+        <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+        <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+        <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+        <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+        <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+      </div>
+    </div>
     <!-- Style Switcher -->
 
     <!------------------------- Boostrap Js Link ------------------------------>
@@ -729,8 +967,27 @@
     <!--------- ScrollReveal and SlipHover JS Link --------->
     <script src="vendor/jquery.directional-hover.js"></script>
     <script src="vendor/jquery.scrollreveal.min.js"></script>
-    <!--------- Easing Js Link ---------> 
+    <!--------- Easing Js Link --------->
     <script src="vendor/jquery.easing.min.js"></script>
+
+    <!-- ============================================
+         Dynamic Years of Experience
+         Runs BEFORE custom.js so the counter library
+         picks up the correct data-count value.
+         ============================================ -->
+    <script>
+      (function () {
+        const START_YEAR = 2023;
+        const years = Math.max(0, new Date().getFullYear() - START_YEAR);
+
+        const el = document.getElementById("years-of-experience");
+        if (el) {
+          el.setAttribute("data-count", String(years));
+          el.textContent = "0"; // reset so counter animates from 0
+        }
+      })();
+    </script>
+
     <!--------- Js Link --------->
     <script src="js/loader.js"></script>
     <script src="js/typed.js"></script>
