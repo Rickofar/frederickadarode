@@ -8,17 +8,32 @@
       name="description"
       content="Frederick Adarode — Full Stack Developer and founder of ADR Systems. Building cloud software for business, education, hospitality, energy, and smart living. Explore my portfolio and the ADR Systems product ecosystem."
     />
+
+    <!-- ============================================
+         Favicons — dynamically swapped based on theme
+         ============================================ -->
     <link
+      id="primary-favicon"
       rel="icon"
       type="image/png"
-      href="https://frederickadarode.netlify.app/images/Favicon/icon.png"
+      href="images/Favicon/icon-dark.png"
+    />
+    <link
+      id="shortcut-favicon"
+      rel="shortcut icon"
+      href="images/Favicon/icon-dark.png"
+    />
+    <link
+      id="apple-favicon"
+      rel="apple-touch-icon"
+      href="images/Favicon/icon-dark.png"
     />
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Frederick Adarode | Full Stack Developer & Founder of ADR Systems" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://frederickadarode.netlify.app" />
-    <meta property="og:image" content="https://frederickadarode.netlify.app/images/Favicon/icon.png" />
+    <meta property="og:image" content="https://frederickadarode.netlify.app/images/Favicon/icon-blue.png" />
     <meta
       property="og:description"
       content="Full Stack Developer and founder of ADR Systems. Building cloud software for business, education, hospitality, energy, and smart living."
@@ -32,7 +47,7 @@
       name="twitter:description"
       content="Full Stack Developer and founder of ADR Systems. Building cloud software for business, education, hospitality, energy, and smart living."
     />
-    <meta name="twitter:image" content="https://frederickadarode.netlify.app/images/Favicon/icon.png" />
+    <meta name="twitter:image" content="https://frederickadarode.netlify.app/images/Favicon/icon-blue.png" />
     <meta name="twitter:site" content="@rickofar1" />
     <meta name="twitter:creator" content="@rickofar1" />
     <title>Frederick Adarode | Full Stack Developer & Founder of ADR Systems</title>
@@ -44,7 +59,7 @@
       "@type": "Person",
       "name": "Frederick Adarode",
       "url": "https://frederickadarode.netlify.app",
-      "image": "https://frederickadarode.netlify.app/images/Favicon/icon.png",
+      "image": "https://frederickadarode.netlify.app/images/Favicon/icon-blue.png",
       "jobTitle": "Full Stack Developer & Founder",
       "worksFor": {
         "@type": "Organization",
@@ -93,7 +108,7 @@
           "name": "ADR Partners",
           "applicationCategory": "BusinessApplication",
           "operatingSystem": "Web",
-          "url": "https://partner.adrsystems.app"
+          "url": "https://partners.adrsystems.app"
         },
         {
           "@type": "SoftwareApplication",
@@ -107,8 +122,6 @@
     }
     </script>
 
-    <!---------------------- Favicon Link ------------------------>
-    <link rel="icon" type="image/x-icon" href="images/Favicon/favicon7.webp" />
     <!--------------------------- Bootstrap CSS Link -------------------------------->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <!--------------------------- Fontawesome Link -------------------------------->
@@ -170,12 +183,14 @@
     <link rel="stylesheet" type="text/css" href="css/style-switcher.css" />
 
     <!-- ============================================
-         Portfolio card refinements
-         Makes the entire card clickable and removes
-         the nested-link problem.
+         Inline styles (critical for scroll UI + portfolio)
+         Kept inline so they always load even if a
+         stylesheet is cached or missing.
          ============================================ -->
     <style>
-      /* The outer <a> now wraps the whole card and points to the destination */
+      /* --------------------------------------------
+         Portfolio card refinements
+         -------------------------------------------- */
       .portfolio-box-link {
         display: block;
         position: relative;
@@ -190,7 +205,6 @@
         cursor: pointer;
       }
 
-      /* Overlay: appears on hover / focus, hides by default */
       .portfolio-box-link .dh-overlay {
         position: absolute;
         inset: 0;
@@ -205,6 +219,7 @@
         transition: opacity 0.3s ease;
         z-index: 2;
         text-align: center;
+        font-weight: 700;
       }
 
       .portfolio-box-link:hover .dh-overlay,
@@ -212,7 +227,6 @@
         opacity: 1;
       }
 
-      /* The pill inside the overlay is now purely visual */
       .portfolio-box-link .portfolio-link {
         display: inline-block;
         margin-top: 0.75rem;
@@ -230,14 +244,12 @@
         border-color: #fff;
       }
 
-      /* Keyboard accessibility focus ring */
       .portfolio-box-link:focus-visible {
         outline: 2px solid var(--accent, #f2a900);
         outline-offset: 4px;
         border-radius: 6px;
       }
 
-      /* Make the img fill nicely */
       .portfolio-box-link img {
         display: block;
         width: 100%;
@@ -247,6 +259,137 @@
 
       .portfolio-box-link:hover img {
         transform: scale(1.05);
+      }
+
+      /* --------------------------------------------
+         Push fixed navbar down 4px to make room for
+         the scroll progress bar at the very top
+         -------------------------------------------- */
+      .navbar.fixed-top {
+        top: 4px;
+      }
+
+      /* --------------------------------------------
+         SCROLL PROGRESS BAR (top of viewport)
+         -------------------------------------------- */
+      .scroll-progress-wrap {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        z-index: 99999;
+        pointer-events: none;
+        background-color: rgba(0, 0, 0, 0.08);
+      }
+
+      #scroll-progress {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0%;
+        background-color: var(--main-color, #2eb1ed);
+        transition: width 0.1s linear, background-color 0.3s ease;
+        box-shadow: 0 0 8px var(--main-color, #2eb1ed);
+      }
+
+      /* --------------------------------------------
+         SCROLL PERCENTAGE BADGE (top-right)
+         -------------------------------------------- */
+      #scroll-percentage {
+        position: fixed;
+        top: 14px;
+        right: 1rem;
+        z-index: 99999;
+        display: block;
+        font-family: "Courier New", monospace;
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        line-height: 1;
+        color: #ffffff;
+        background-color: var(--main-color, #2eb1ed);
+        padding: 6px 12px;
+        border-radius: 999px;
+        opacity: 0;
+        transform: translateY(-8px);
+        transition: opacity 0.3s ease, transform 0.3s ease,
+          background-color 0.3s ease;
+        pointer-events: none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        white-space: nowrap;
+      }
+
+      #scroll-percentage.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* --------------------------------------------
+         SCROLL-TO-TOP BUTTON (bottom-right)
+         -------------------------------------------- */
+      #scroll-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        border: none;
+        padding: 0;
+        margin: 0;
+        background-color: var(--main-color, #2eb1ed);
+        color: #ffffff;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+        transition: opacity 0.3s ease, transform 0.3s ease,
+          visibility 0.3s ease, background-color 0.3s ease,
+          box-shadow 0.3s ease;
+        z-index: 99999;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      #scroll-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      #scroll-to-top:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+      }
+
+      #scroll-to-top:focus-visible {
+        outline: 2px solid #ffffff;
+        outline-offset: 2px;
+      }
+
+      #scroll-to-top svg {
+        display: block;
+        pointer-events: none;
+      }
+
+      @media (max-width: 576px) {
+        #scroll-to-top {
+          bottom: 20px;
+          right: 20px;
+          width: 42px;
+          height: 42px;
+        }
+        #scroll-percentage {
+          top: 12px;
+          right: 10px;
+          font-size: 0.72rem;
+          padding: 5px 10px;
+        }
       }
     </style>
   </head>
@@ -260,8 +403,19 @@
     <nav class="navbar default-nav fixed-top navbar-expand-lg navbar-dark nav-overlay">
       <div class="container-fluid">
         <a class="navbar-brand pt-0" href="home">
-          <img src="images/Favicon/icon-dark.png" class="img-fluid logo-light" alt="Frederick Adarode logo" />
-          <img src="images/Favicon/icon.png" class="img-fluid logo-dark" alt="Frederick Adarode logo" />
+          <!-- Header logos — dynamically swapped based on theme -->
+          <img
+            id="nav-logo-light"
+            src="images/Favicon/icon-dark.png"
+            class="img-fluid logo-light"
+            alt="Frederick Adarode logo"
+          />
+          <img
+            id="nav-logo-dark"
+            src="images/Favicon/icon-dark.png"
+            class="img-fluid logo-dark"
+            alt="Frederick Adarode logo"
+          />
         </a>
 
         <!--------- Nav Collapsed Button --------->
@@ -305,7 +459,6 @@
 
     <!--------- Home-Section Starts Here --------->
     <section class="home-section section bg-img d-flex align-items-center text-center" id="home">
-      <!--------- Hero Starts Here --------->
       <div class="container px-4 py-5 my-5 text-center">
         <div class="row">
           <div class="col-lg-12">
@@ -328,7 +481,7 @@
             </div>
           </div>
         </div>
-      <!--------- Hero Ends Here --------->
+      </div>
     </section>
     <!--------- Home-Section Ends Here --------->
 
@@ -370,7 +523,6 @@
                 <a href="https://www.linkedIn.com/in/frederickadarode" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
               </div>
             </div>
-            <!-- Social Media Links -->
           </div>
         </div>
         <!-- About Tabs Start -->
@@ -703,18 +855,12 @@
 
         <div class="portfolio row mb-3" id="container">
           <!-- ADR Business Suite -->
-          <div class="grid-item col-md-4 web-design brands mb-4 dh-container">
-            <a
-              class="portfolio-box-link"
-              href="https://business.adrsystems.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit ADR Business Suite"
-            >
+          <div class="grid-item col-md-4 web-design brands mb-4">
+            <a class="portfolio-box-link" href="https://business.adrsystems.app" target="_blank" rel="noopener noreferrer" aria-label="Visit ADR Business Suite in a new tab">
               <div class="portfolio-box">
-                <div class="dh-overlay text-center fw-bold">
+                <div class="dh-overlay">
                   ADR Business Suite
-                  <span class="portfolio-link">Visit Site</span>
+                  <span class="portfolio-link">Visit Site ↗</span>
                 </div>
                 <img src="images/Clients/adr-business-suite.png" alt="ADR Business Suite — cloud business management platform" />
               </div>
@@ -722,18 +868,12 @@
           </div>
 
           <!-- ADR Business Suite Mobile -->
-          <div class="grid-item col-md-4 mobile brands mb-4 dh-container">
-            <a
-              class="portfolio-box-link"
-              href="https://business.adrsystems.app/download"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Download ADR Business Suite Mobile"
-            >
+          <div class="grid-item col-md-4 mobile brands mb-4">
+            <a class="portfolio-box-link" href="https://business.adrsystems.app/download" target="_blank" rel="noopener noreferrer" aria-label="Download ADR Business Suite Mobile in a new tab">
               <div class="portfolio-box">
-                <div class="dh-overlay text-center fw-bold">
+                <div class="dh-overlay">
                   ADR Business Suite Mobile
-                  <span class="portfolio-link">Download APK</span>
+                  <span class="portfolio-link">Download APK ↗</span>
                 </div>
                 <img src="images/Clients/adr-business-suite-mobile.png" alt="ADR Business Suite Mobile — Android app for inventory and sales" />
               </div>
@@ -741,37 +881,25 @@
           </div>
 
           <!-- ADR Partners -->
-          <div class="grid-item col-md-4 web-design brands mb-4 dh-container">
-            <a
-              class="portfolio-box-link"
-              href="https://partner.adrsystems.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit ADR Partners"
-            >
+          <div class="grid-item col-md-4 web-design brands mb-4">
+            <a class="portfolio-box-link" href="https://partners.adrsystems.app" target="_blank" rel="noopener noreferrer" aria-label="Visit ADR Partners in a new tab">
               <div class="portfolio-box">
-                <div class="dh-overlay text-center fw-bold">
+                <div class="dh-overlay">
                   ADR Partners
-                  <span class="portfolio-link">Visit Site</span>
+                  <span class="portfolio-link">Visit Site ↗</span>
                 </div>
                 <img src="images/Clients/adr-partners.png" alt="ADR Partners — affiliate program for ADR Systems products" />
               </div>
             </a>
           </div>
 
-          <!-- ADR Systems (corporate) -->
-          <div class="grid-item col-md-4 web-design brands mb-4 dh-container">
-            <a
-              class="portfolio-box-link"
-              href="https://adrsystems.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit ADR Systems"
-            >
+          <!-- ADR Systems -->
+          <div class="grid-item col-md-4 web-design brands mb-4">
+            <a class="portfolio-box-link" href="https://adrsystems.app" target="_blank" rel="noopener noreferrer" aria-label="Visit ADR Systems in a new tab">
               <div class="portfolio-box">
-                <div class="dh-overlay text-center fw-bold">
+                <div class="dh-overlay">
                   ADR Systems
-                  <span class="portfolio-link">Visit Site</span>
+                  <span class="portfolio-link">Visit Site ↗</span>
                 </div>
                 <img src="images/Clients/adr-systems.png" alt="ADR Systems — software company building cloud products" />
               </div>
@@ -779,18 +907,12 @@
           </div>
 
           <!-- Bonny Official -->
-          <div class="grid-item col-md-4 web-design brands mb-4 dh-container">
-            <a
-              class="portfolio-box-link"
-              href="https://bonny-official.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit Bonny Official website"
-            >
+          <div class="grid-item col-md-4 web-design brands mb-4">
+            <a class="portfolio-box-link" href="https://bonny-official.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Bonny Official website in a new tab">
               <div class="portfolio-box">
-                <div class="dh-overlay text-center fw-bold">
+                <div class="dh-overlay">
                   Bonny Official Website
-                  <span class="portfolio-link">Visit Site</span>
+                  <span class="portfolio-link">Visit Site ↗</span>
                 </div>
                 <img src="https://frederickadarode.netlify.app/images/bonny/bonny-official.jpeg" alt="Bonny Official — artist website with streaming and merch" />
               </div>
@@ -798,18 +920,12 @@
           </div>
 
           <!-- LMV Pro Lights -->
-          <div class="grid-item col-md-4 brands web-design mb-4 dh-container">
-            <a
-              class="portfolio-box-link"
-              href="https://rickofar.github.io/lmv-pro"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="View LMV Pro Lights project"
-            >
+          <div class="grid-item col-md-4 brands web-design mb-4">
+            <a class="portfolio-box-link" href="https://rickofar.github.io/lmv-pro" target="_blank" rel="noopener noreferrer" aria-label="View LMV Pro Lights project in a new tab">
               <div class="portfolio-box">
-                <div class="dh-overlay text-center fw-bold">
+                <div class="dh-overlay">
                   LMV Pro Lights
-                  <span class="portfolio-link">View Project</span>
+                  <span class="portfolio-link">View Project ↗</span>
                 </div>
                 <img src="images/Clients/lmv.png" alt="LMV Pro Lights — brand and product site" />
               </div>
@@ -817,56 +933,38 @@
           </div>
 
           <!-- The Property Experts -->
-          <div class="grid-item col-md-4 web-design brands mb-4 dh-container">
-            <a
-              class="portfolio-box-link"
-              href="https://property-xperts.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit The Property Experts"
-            >
+          <div class="grid-item col-md-4 web-design brands mb-4">
+            <a class="portfolio-box-link" href="https://property-xperts.com" target="_blank" rel="noopener noreferrer" aria-label="Visit The Property Experts in a new tab">
               <div class="portfolio-box" style="background: #161e2d; padding: 0.5rem;">
-                <div class="dh-overlay text-center fw-bold">
+                <div class="dh-overlay">
                   The Property Experts
-                  <span class="portfolio-link">Visit Site</span>
+                  <span class="portfolio-link">Visit Site ↗</span>
                 </div>
                 <img src="./images/Clients/the-property-expert-1-1.jpg" alt="The Property Experts — real estate platform" />
               </div>
             </a>
           </div>
 
-          <!-- Days & Nights (Video) -->
-          <div class="grid-item col-md-4 photography mb-4 dh-container">
-            <a
-              class="portfolio-box-link"
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Watch Days and Nights video"
-            >
+          <!-- Days & Nights -->
+          <div class="grid-item col-md-4 photography mb-4">
+            <a class="portfolio-box-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Watch Days and Nights video in a new tab">
               <div class="portfolio-box">
-                <div class="dh-overlay text-center fw-bold">
+                <div class="dh-overlay">
                   Days &amp; Nights (Deep Ends)
-                  <span class="portfolio-link">View Video</span>
+                  <span class="portfolio-link">View Video ↗</span>
                 </div>
                 <img src="images/Clients/days_n_nights.png" alt="Days and Nights — lyric animated video" />
               </div>
             </a>
           </div>
 
-          <!-- Cactus (Video) -->
-          <div class="grid-item col-md-4 photography mb-4 dh-container">
-            <a
-              class="portfolio-box-link"
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Watch Cactus video"
-            >
+          <!-- Cactus -->
+          <div class="grid-item col-md-4 photography mb-4">
+            <a class="portfolio-box-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Watch Cactus video in a new tab">
               <div class="portfolio-box">
-                <div class="dh-overlay text-center fw-bold">
+                <div class="dh-overlay">
                   Cactus
-                  <span class="portfolio-link">View Video</span>
+                  <span class="portfolio-link">View Video ↗</span>
                 </div>
                 <img src="images/Clients/cactus.png" alt="Cactus — lyric animated video" />
               </div>
@@ -970,11 +1068,7 @@
     <!--------- Easing Js Link --------->
     <script src="vendor/jquery.easing.min.js"></script>
 
-    <!-- ============================================
-         Dynamic Years of Experience
-         Runs BEFORE custom.js so the counter library
-         picks up the correct data-count value.
-         ============================================ -->
+    <!-- Dynamic "Years of Experience" — runs before custom.js -->
     <script>
       (function () {
         const START_YEAR = 2023;
@@ -983,7 +1077,6 @@
         const el = document.getElementById("years-of-experience");
         if (el) {
           el.setAttribute("data-count", String(years));
-          el.textContent = "0"; // reset so counter animates from 0
         }
       })();
     </script>
@@ -993,5 +1086,33 @@
     <script src="js/typed.js"></script>
     <script src="js/style-switcher.js"></script>
     <script src="js/custom.js"></script>
+
+    <!-- ============================================
+         SCROLL UI — placed LAST so it paints on top
+         of everything (nav, sections, footer)
+         ============================================ -->
+    <div class="scroll-progress-wrap" aria-hidden="true">
+      <div id="scroll-progress"></div>
+    </div>
+
+    <span id="scroll-percentage" aria-hidden="true">0%</span>
+
+    <button id="scroll-to-top" type="button" aria-label="Scroll back to top">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <line x1="12" y1="19" x2="12" y2="5"></line>
+        <polyline points="5 12 12 5 19 12"></polyline>
+      </svg>
+    </button>
   </body>
 </html>

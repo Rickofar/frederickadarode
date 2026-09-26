@@ -113,6 +113,16 @@
         transition: all 0.3s ease;
       }
 
+      /* Push the fixed navbar down 3px to make room for the scroll progress bar */
+.navbar.fixed-top {
+  top: 3px;
+}
+
+/* When the navbar becomes sticky, keep the same 3px offset */
+.navbar.sticky.fixed-top {
+  top: 3px;
+}
+
       .navbar.sticky {
         padding: 10px 0;
         background-color: var(--bright-color);
@@ -841,19 +851,107 @@
         }
       }
  
-      .skills-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  margin-top: 1.5rem;
+      /* ============================================
+   Scroll progress bar (top of viewport)
+   ============================================ */
+.scroll-progress-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  z-index: 99999;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.06);
 }
-.skill-chip {
-  padding: 8px 16px;
+
+.scroll-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background-color: var(--main-color, #2eb1ed);
+  transition: width 0.08s linear, background-color 0.3s ease;
+  box-shadow: 0 0 8px var(--main-color, #2eb1ed);
+  will-change: width;
+}
+
+/* Percentage badge (top-right) */
+.scroll-percentage {
+  display: block;
+  position: fixed;
+  top: 12px;
+  right: 1rem;
+  z-index: 9999;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: "Courier New", monospace;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  background-color: var(--main-color, #2eb1ed);
+  padding: 4px 12px;
   border-radius: 999px;
-  background: #f1f5f9;
-  color: #0f172a;
-  font-size: 0.875rem;
-  font-weight: 500;
-  border: 1px solid #e2e8f0;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.3s ease, transform 0.3s ease,
+    background-color 0.3s ease;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  white-space: nowrap;
+}
+
+.scroll-percentage.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scroll-to-top button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--main-color, #2eb1ed);
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s,
+    background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 9999;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+}
+
+.scroll-to-top:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+@media (max-width: 576px) {
+  .scroll-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+  }
 }
